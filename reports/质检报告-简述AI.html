@@ -1,0 +1,160 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简述AI简历小程序 · 自动化内容质检报告 · 董凯作品集</title>
+<style>
+:root{--bg:#F7F6F2;--ink:#191917;--ink2:#55544F;--ink3:#8C8A82;--line:#E3E1D9;--accent:#5B6BD6;--accent-ink:#3D4AB5;--accent-soft:#ECEFFA;--white:#FFFFFF;--bg-soft:#EFEDE7}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+.report-top{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.report-bar{max-width:960px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.report-bar a{color:var(--accent-ink);text-decoration:none;font-size:14px;font-weight:650;border:1px solid var(--accent);padding:6px 14px;border-radius:999px;transition:background .2s}
+.report-bar a:hover{background:var(--accent-soft)}
+.report-bar .doc-note{font-size:12px;color:var(--ink3);letter-spacing:.06em}
+main{max-width:960px;margin:0 auto;padding:48px 24px 96px}
+h1{font-size:clamp(26px,3.4vw,34px);line-height:1.25;margin:0 0 12px;letter-spacing:-.01em;font-weight:700}
+h2{font-size:24px;margin:40px 0 14px;padding-top:18px;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:19px;margin:28px 0 10px;font-weight:700}
+h4{font-size:16px;margin:22px 0 8px;font-weight:700}
+p{margin:10px 0}
+a{color:var(--accent-ink)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0}
+blockquote{margin:14px 0;padding:12px 18px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;color:var(--ink2)}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg-soft);padding:2px 6px;border-radius:6px}
+pre{background:#1B1E27;color:#E6E9F2;padding:16px 18px;border-radius:12px;overflow-x:auto;line-height:1.6}
+pre code{background:none;color:inherit;padding:0}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;background:var(--white);display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+tr:nth-child(even) td{background:#FAFAF8}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+strong{font-weight:700}
+img{max-width:100%;border-radius:10px}
+@media (max-width:640px){main{padding:28px 16px 64px}h1{font-size:25px}h2{font-size:21px}th,td{padding:7px 9px}}
+</style>
+</head>
+<body>
+<div class="report-top">
+  <div class="report-bar">
+    <a href="../index.html">← 返回作品集</a>
+    <span class="doc-note">项目报告 · 董凯作品集</span>
+  </div>
+</div>
+<main>
+<h1>简述AI简历小程序 · 自动化内容质检报告</h1>
+<blockquote>
+<p>生成方式：后台每 10 分钟自动跑 <code>run_auto_test.js</code>（06:10 起，至 12:10 自动停），从中立、批判角度评估生成内容。
+评估维度：① 对用户是否有用/可读/结构清晰 ② 是否编造（虚构数据/经历/数字/功能）③ 是否符合所选岗位（方向错配）④ 安全校验（safety）结果。
+说明：本报告只记录事实与问题，不做主观夸赞。安全校验已于 06:50 升级为「拦截+二次确认」——❌编造片段自动剔除上屏，原版保留供用户恢复。</p>
+</blockquote>
+<hr />
+<h2>本轮评估（手动触发 · runSeq=6）</h2>
+<ul>
+<li><strong>用例</strong>：tech-frontend（正常用例：技术·前端，经历较完整）</li>
+<li><strong>求职意向</strong>：前端开发工程师（校招）</li>
+<li><strong>生成耗时</strong>：约 13 秒，markdown 648 字，结构完整（基本信息/教育/项目/技能/自我评价）。</li>
+<li><strong>对岗性</strong>：✅ 贴合。命中策略块为前端性能/工程化/用户体验，要求解析涵盖 JS/Vue/小程序/Node.js，与简历匹配。</li>
+<li><strong>有用性</strong>：⚠️ 结构可用，但存在硬伤——多处细节为用户原始经历中<strong>完全未提及</strong>的内容。</li>
+</ul>
+<h3>编造清单（❌ 安全模块标红，共 4 处）</h3>
+<ol>
+<li><strong>主修课程：数据结构、操作系统、计算机网络、数据库原理</strong> —— 用户原稿未提任何课程，模型自由补全。</li>
+<li><strong>项目成果：「小程序核心页面稳定运行，组件复用覆盖率达主要业务模块」</strong> —— 原稿无此成果描述。</li>
+<li><strong>项目成果：「博客系统功能完整，具备全栈开发基础能力」</strong> —— 原稿无此总结句。</li>
+<li><strong>「设计 RESTful API 接口，支持文章列表分页加载与标签筛选」</strong> —— 原稿仅写「基于 Node.js+Vue 全栈开发」，未提 API 设计/分页/标签筛选。</li>
+</ol>
+<h3>拔高/夸大（⚠️ 2 处）</h3>
+<ul>
+<li>「优化首屏加载性能」原稿为「首屏加载优化40%」，表述被泛化。</li>
+<li>「首屏加载时间优化40%」与原稿「首屏加载优化40%」口径需用户确认（时间/指标歧义）。</li>
+</ul>
+<h3>待补充（ℹ️ 3 处）</h3>
+<ul>
+<li>电话/邮箱/所在地均为 XXX，属正常占位，需用户填真实信息。</li>
+</ul>
+<p><strong>本轮结论</strong>：结构可读、对岗，但<strong>编造 4 处</strong>直接写进简历稿，且安全模块未拦截——对简历产品属高风险。</p>
+<hr />
+<h2>累计样本概览（截至 06:23）</h2>
+<table>
+<thead>
+<tr>
+<th>runSeq</th>
+<th>用例</th>
+<th>求职意向</th>
+<th>字数</th>
+<th>safe</th>
+<th>flags</th>
+<th>编造❌</th>
+<th>警告⚠️</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>product-ai-pm</td>
+<td>AI产品经理（校招）</td>
+<td>759</td>
+<td>false</td>
+<td>6</td>
+<td>2</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>design-ui</td>
+<td>UI设计师（校招）</td>
+<td>703</td>
+<td>false</td>
+<td>7</td>
+<td>1</td>
+<td>4</td>
+</tr>
+<tr>
+<td>5</td>
+<td>marketing-brand</td>
+<td>品牌市场（校招）</td>
+<td>533</td>
+<td>true</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td>tech-frontend</td>
+<td>前端开发工程师（校招）</td>
+<td>648</td>
+<td>false</td>
+<td>7</td>
+<td>4</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>统计</strong>：4 个样本中 3 个存在编造（编造数 2/1/4），仅 1 个完全干净。</p>
+<hr />
+<h2>系统性问题（初步）</h2>
+<ol>
+<li><strong>编造是普遍现象，非偶发</strong>：生成后端在用户原始经历之外会自动「补全」细节（主修课程、项目成果总结句、API/技术实现描述、业务数字）。原稿信息越稀疏，补全/编造越多。</li>
+<li>~~安全模块只标记不拦截~~ → <strong>已修复（B 方案，06:50 落地）</strong>：safety 现同时产出 cleanedMarkdown（仅删 ❌编造片段），主流程用清洗版上屏、原版留作 rawMarkdown 供二次确认；前端 preview 新增「已自动移除 N 处疑似编造细节」卡片 + 逐项「恢复」按钮。</li>
+<li><strong>对岗性良好</strong>：方向匹配、策略块命中、结构排版均达标，这是当前唯一稳定的优势。</li>
+</ol>
+<h2>修复记录（B 方案 · 拦截/二次确认）</h2>
+<ul>
+<li>时间：2026-08-24 06:50</li>
+<li>后端（<code>cloudfunctions/generatePortfolio/prompts.js</code> + <code>index.js</code>）：<code>validate</code> 契约升级为「标最小编造片段 + 产出 cleanedMarkdown（删片段不删整句，避免误删真实数据）」；主流程加<strong>后端强制兜底</strong>（遍历 ❌片段对原文做字符串剔除，应对模型偷懒不删——实测首轮模型确实把 cleanedMarkdown 写成原样未删）；返回 <code>cleanedMarkdown</code>（上屏）+ <code>rawMarkdown</code>（供恢复）+ <code>safety.removedFabrications</code>。</li>
+<li>测试链路（<code>scripts/run_auto_test.js</code>）：同步拦截逻辑，新增 <code>fabricationsStillInOutput</code> 指标验证编造零泄露。</li>
+<li>前端（<code>miniprogram/pages/generate/preview.*</code> + <code>utils/resultView.js</code>）：默认展示清洗版；红色卡片列出被移除的疑似编造细节，每项「恢复」按钮（用户决策，防误删真实数据）；复制/保存均走用户确认后的版本。</li>
+<li>验证：tech-frontend 与 product-ai-pm 两用例，<code>fabricationsStillInOutput</code> 均为 <strong>0</strong>，真实数据（首屏优化40%、满意度3.8→4.5、注册2000+ 等）<strong>全部保留</strong>。</li>
+<li>残留（次要，属 generate 层非拦截失效）：① generate 模板诱导的「主修课程」等字段偶漏标；② 删片段后标点残缺（如「上线，。」、空 bullet）。待后续优化 generate prompt 或前端展示规整。</li>
+</ul>
+<h2>待决策（剩余）</h2>
+<ul>
+<li>A. 是否让生成逻辑「严格只基于用户原始输入、不补全未提及细节」（牺牲丰富度换真实性）？</li>
+<li>C. 是否给弱经历用例（原稿信息少）增加「缺失项引导填写」而非自动编造？</li>
+</ul>﻿</main>
+</body>
+</html>

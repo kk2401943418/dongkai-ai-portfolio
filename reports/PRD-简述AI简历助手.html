@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>简述AI · 简历改写小程序 PRD（产品需求文档） · 董凯作品集</title>
+<style>
+:root{--bg:#F7F6F2;--ink:#191917;--ink2:#55544F;--ink3:#8C8A82;--line:#E3E1D9;--accent:#5B6BD6;--accent-ink:#3D4AB5;--accent-soft:#ECEFFA;--white:#FFFFFF;--bg-soft:#EFEDE7}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+.report-top{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.report-bar{max-width:960px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.report-bar a{color:var(--accent-ink);text-decoration:none;font-size:14px;font-weight:650;border:1px solid var(--accent);padding:6px 14px;border-radius:999px;transition:background .2s}
+.report-bar a:hover{background:var(--accent-soft)}
+.report-bar .doc-note{font-size:12px;color:var(--ink3);letter-spacing:.06em}
+main{max-width:960px;margin:0 auto;padding:48px 24px 96px}
+h1{font-size:clamp(26px,3.4vw,34px);line-height:1.25;margin:0 0 12px;letter-spacing:-.01em;font-weight:700}
+h2{font-size:24px;margin:40px 0 14px;padding-top:18px;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:19px;margin:28px 0 10px;font-weight:700}
+h4{font-size:16px;margin:22px 0 8px;font-weight:700}
+p{margin:10px 0}
+a{color:var(--accent-ink)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0}
+blockquote{margin:14px 0;padding:12px 18px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;color:var(--ink2)}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg-soft);padding:2px 6px;border-radius:6px}
+pre{background:#1B1E27;color:#E6E9F2;padding:16px 18px;border-radius:12px;overflow-x:auto;line-height:1.6}
+pre code{background:none;color:inherit;padding:0}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;background:var(--white);display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+tr:nth-child(even) td{background:#FAFAF8}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+strong{font-weight:700}
+img{max-width:100%;border-radius:10px}
+@media (max-width:640px){main{padding:28px 16px 64px}h1{font-size:25px}h2{font-size:21px}th,td{padding:7px 9px}}
+</style>
+</head>
+<body>
+<div class="report-top">
+  <div class="report-bar">
+    <a href="../index.html">← 返回作品集</a>
+    <span class="doc-note">项目报告 · 董凯作品集</span>
+  </div>
+</div>
+<main>
+<h1>简述AI · 简历改写小程序 PRD（产品需求文档）</h1>
+<blockquote>
+<p>文档版本：v1.0（正式版）｜ 日期：2026-08-28 ｜ 作者：产品负责人（董凯）
+状态：体验版已发布（内测 N=7），未正式上线
+前置依据：<code>设计规范/2026-08-24_ai-resume-miniprogram.md</code>（Spec）、<code>Prompt资产_简历改写.md</code>（产品定义模板）、<code>工程实现/</code>（真实代码行为）
+本文为求职作品集使用的正式 PRD；所有数字为真实产物口径（见各节标注），未实测项标【待实测】。</p>
+</blockquote>
+<hr />
+<h2>1. 背景与问题</h2>
+<ul>
+<li><strong>用户</strong>：应届生 / 在校生，尤其 AI 硬件 PM 等转岗同学，需针对不同岗位反复改写简历。</li>
+<li><strong>痛点</strong>：
+  1. 改一份简历要在「文档软件写 + AI 工具改 + 招聘平台查 JD」间来回切换，上下文打不通、信息易丢；
+  2. 免费 AI 工具上下文受限、无私有知识库，产出千篇一律、对不齐 JD 能力词；
+  3. 多数人"会写但写不好"，缺一个优秀案例做对齐基准。</li>
+<li><strong>关键洞察</strong>：问题不在"用户不会写"，而在<strong>门槛高（工具割裂 + 无知识库）</strong>与<strong>缺对齐框架（经历无法自动映射到 JD 能力词）</strong>。</li>
+<li><strong>产品定位</strong>：把"写简历"收敛成「选方向 → 贴 JD → 填素材 → AI 生成可投递简历」的一站式产品；核心差异 = <strong>自建 RAG 策略库对齐岗位 + 反编造安全校验</strong>。</li>
+</ul>
+<h2>2. 目标用户与场景</h2>
+<table>
+<thead>
+<tr>
+<th>用户画像</th>
+<th>高频场景（JTBD）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>校招生：有真实经历但不会"对岗表达"</td>
+<td>"投 AI 产品经理岗，把我零散的项目经历改写成对得上 JD 的简历"</td>
+</tr>
+<tr>
+<td>转岗求职者（设计→AI 硬件/PM）</td>
+<td>"同一段经历要针对产品/运营/设计不同岗反复改写"</td>
+</tr>
+<tr>
+<td>弱素材用户（经历少、无量化）</td>
+<td>"我经历很短，希望至少生成结构规范、不编造的简历"</td>
+</tr>
+</tbody>
+</table>
+<h2>3. 产品范围（MoSCoW）</h2>
+<table>
+<thead>
+<tr>
+<th>级别</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Must</strong></td>
+<td>选岗（6 大方向/45 子方向）→ 解析 JD → 填信息 → 生成预览；反编造安全校验；复制/保存简历；JD 方向一致性校验</td>
+</tr>
+<tr>
+<td><strong>Should</strong></td>
+<td>JD 匹配度评分（P0）；安全校验"原文对照+一键处理"（P0）；我的简历管理（重命名/删除/重新生成）；导出图片；隐私政策+一键清除数据；生成进度真实化；最近使用</td>
+</tr>
+<tr>
+<td><strong>Could</strong></td>
+<td>导出 PDF/Word（问卷 4/7 呼声）；填信息分段识别；多份简历对比</td>
+</tr>
+<tr>
+<td><strong>Won't（本轮不做）</strong></td>
+<td>作品集排版；社交分享；账号体系；多版本对比；投递结果闭环（进迭代队列）</td>
+</tr>
+</tbody>
+</table>
+<h2>4. 核心流程与功能规格</h2>
+<pre><code>选岗(6大→45子方向) → 解析JD(粘贴/示例) → 填信息(单框) → 生成中 → 预览(复制/保存/导出)
+</code></pre>
+<h3>4.1 选岗页</h3>
+<ul>
+<li>6 大板块（产品/运营/市场/设计/数据/开发），点选后<strong>底部弹窗</strong>选子方向（45 个 + 自定义"其他"），确认后直接进 JD 页（少点一次）。</li>
+<li>切换岗位 → <strong>清空旧 JD / 旧个人信息</strong>，防上一份岗位内容残留。</li>
+<li>最近使用：最近 3 个方向一键复用（P1）。</li>
+</ul>
+<h3>4.2 JD 解析页</h3>
+<ul>
+<li>支持粘贴 + 示例填充；JD &lt; 20 字提示补全（P1）。</li>
+<li><strong>方向一致性校验</strong>：关键词频次检测 JD 最像哪个方向；与所选不一致且置信度足够（占比≥35% 且≥2 词）→ 弹窗三选项：修改 JD / 重选方向 / 仍用当前方向生成。</li>
+</ul>
+<h3>4.3 填信息页</h3>
+<ul>
+<li>单文本框粘贴个人素材（姓名/教育/项目/技能等，≤5000 字）；本地自动识别 姓名/电话/邮箱 显示 chips（仅提示，不落库）。</li>
+<li>切换岗位自动清空旧素材。</li>
+</ul>
+<h3>4.4 生成中</h3>
+<ul>
+<li>真实调用云函数期间显示伪进度 0→80% + 四阶段文案轮换（加载知识库→解析JD→分析背景→AI 改写），返回后跳 100%（P1）。</li>
+<li>失败分类提示：额度不足 / 超时 / 云环境配置 / 云函数未部署 / 网络异常。</li>
+</ul>
+<h3>4.5 结果预览</h3>
+<ul>
+<li>结构化渲染（基本信息/教育/项目/技能/自我评价），Markdown 复制、保存到"我的简历"、导出图片（P1）。</li>
+<li><strong>JD 匹配度卡片</strong>：规则层比对 JD 核心要求 vs 简历正文，命中/缺失关键词分组展示（P0，真机实测 85%）。</li>
+<li><strong>安全校验区</strong>：❌ 编造自动移除 + 逐项恢复；⚠️/ℹ️ 支持"保留/移除"；「我的原始信息」对照块（P0）。</li>
+</ul>
+<h2>5. 用户故事（节选）</h2>
+<ol>
+<li>作为<strong>校招生</strong>，我想粘贴 JD 后自动生成对岗简历，以便不用逐条对照 JD 能力词改写。</li>
+<li>作为<strong>转岗用户</strong>，我想切换岗位时系统清空旧 JD/素材，以便避免上一份岗位内容串扰。</li>
+<li>作为<strong>对 AI 不信任的用户</strong>，我想看到 AI 改写了哪里、依据是什么，以便确认没有编造。</li>
+<li>作为<strong>结果导向用户</strong>，我想知道简历与 JD 的匹配缺口，以便补齐后投递。</li>
+<li>作为<strong>隐私敏感用户</strong>，我想一键清除所有本地数据，以便控制个人信息。</li>
+</ol>
+<h2>6. 验收标准（AC）</h2>
+<ul>
+<li>AC1：完整走 4 步可生成结构化简历并复制/保存（✅ 已验收）。</li>
+<li>AC2：JD 方向错配时弹三选项，且不会错误拦截同方向 JD（✅ jd.js 检测）。</li>
+<li>AC3：生成内容中 ❌ 编造片段不出现在最终上屏版，用户可逐项恢复（✅ 质检归零：fabricationsStillInOutput=0）。</li>
+<li>AC4：JD 匹配度卡片在无 analysis 时隐藏、不报错（✅ 单测 14/14）。</li>
+<li>AC5：隐私入口可达、一键清除后本地数据清空、统计归零（✅ P1）。</li>
+<li>AC6：生成失败给分类提示、不静默（✅ loading.js）。</li>
+<li>AC7：【待实测】弱经历引导（决策 C）→ 排下个迭代。</li>
+</ul>
+<h2>7. 指标（数据口径）</h2>
+<ul>
+<li><strong>北极星建议</strong>：生成可投递简历的完成率（进入生成→保存/复制的转化）。</li>
+<li><strong>漏斗</strong>：select_confirm → jd_next → profile_submit → generate_success → resume_copy（已埋 10 事件，events 集合已建，<strong>2 周后导出真实转化率</strong>）。</li>
+<li><strong>已有真实数据</strong>：生成时延均值约 10.7s（自测 benchmark）；内测 N=7：满意度 4.57/5、推荐 9.14/10、无异常 7/7；质检 4 样本编造 3→0。</li>
+<li>反向指标：编造仍残留数、匹配度误报率（规则层近似，待优化）。</li>
+</ul>
+<h2>8. 异常与兜底</h2>
+<table>
+<thead>
+<tr>
+<th>异常</th>
+<th>处理</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>JD 过短（&lt;20 字）</td>
+<td>提示补全，阻止下一步</td>
+</tr>
+<tr>
+<td>JD 方向与所选不一致</td>
+<td>三选项弹窗</td>
+</tr>
+<tr>
+<td>生成失败</td>
+<td>分类提示 + 返回重试</td>
+</tr>
+<tr>
+<td>AI 编造</td>
+<td>校验层拦截 + cleanedMarkdown + 恢复按钮</td>
+</tr>
+<tr>
+<td>检索失败</td>
+<td>向量→LLM 检索降级</td>
+</tr>
+<tr>
+<td>弱素材（无量化）</td>
+<td>当前：概括表达不编造；下迭代：缺失项引导填写（决策 C）</td>
+</tr>
+</tbody>
+</table>
+<h2>9. 技术方案（PM 视角）</h2>
+<ul>
+<li>前端：微信小程序原生（CameraX 无关；云函数调用封装 <code>utils/request.js</code>）。</li>
+<li>后端：微信云函数 <code>generatePortfolio</code>（Node.js），密钥随包 <code>config.json</code> 读取（坑：云端不注入 process.env → 401）。</li>
+<li>AI：DeepSeek <code>deepseek-chat</code>（改写/分析/校验）+ 硅基流动 <code>BAAI/bge-m3</code>（向量检索，预计算 <code>strategyVectors.js</code> 820KB）。</li>
+<li>RAG：85 块写法策略库（零个人事实，防"换皮"）→ 岗位过滤 → 向量粗排 top-10 → LLM 精排 top-3。</li>
+<li>安全：三层——生成 Prompt 硬契约（事实只来自用户）+ 校验器标注（编造/夸大/拔高/待补充）+ 后端强制剔除 ❌。</li>
+</ul>
+<h2>10. 合规与隐私</h2>
+<ul>
+<li>仅收集必要信息（简历原文/JD/设备与网络状态）；不收集位置/通讯录/麦克风/摄像头/相册读取。</li>
+<li>简历原文仅本次会话使用，存储 ≤1 天自动清除（表单固定期限 1 天）。</li>
+<li>数据不共享第三方；传输至 DeepSeek 仅用于本次生成。</li>
+<li>小程序内提供隐私政策页 + 「清除所有数据」一键删除（PIPL）。</li>
+</ul>
+<h2>11. 非目标（明确不做）</h2>
+<ul>
+<li>不做显示屏/硬件（那是眼镜项目）；不做作品集排版引擎；不做社交/分享裂变；不做账号与订阅体系；不做多版本对比（当前）。</li>
+</ul>
+<h2>12. 开放问题 / 下个迭代</h2>
+<ul>
+<li>决策 A（生成严格不补全？）→ 已定：保持现状（宽松生成+校验兜底）。</li>
+<li>决策 C（弱经历缺失项引导填写？）→ 已定：做，P2 最高优先级。</li>
+<li>局部再生成 / 正文编造位置高亮 / 导出 PDF / 多版本对比 → 迭代队列。</li>
+</ul>
+<h2>附：验收记录</h2>
+<ul>
+<li>2026-08-27 真机验收通过（P0+P1）；events 集合已建；云函数已部署。</li>
+</ul>
+</main>
+</body>
+</html>

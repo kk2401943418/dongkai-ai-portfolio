@@ -1,0 +1,251 @@
+﻿<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>即问 · AI 智能眼镜 — 市场与用户调研报告（综合版） · 董凯作品集</title>
+<style>
+:root{--bg:#F7F6F2;--ink:#191917;--ink2:#55544F;--ink3:#8C8A82;--line:#E3E1D9;--accent:#5B6BD6;--accent-ink:#3D4AB5;--accent-soft:#ECEFFA;--white:#FFFFFF;--bg-soft:#EFEDE7}
+*{box-sizing:border-box}
+body{margin:0;font-family:'Noto Sans SC','Microsoft YaHei',-apple-system,sans-serif;background:var(--bg);color:var(--ink);line-height:1.75;-webkit-font-smoothing:antialiased}
+.report-top{background:var(--white);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.report-bar{max-width:960px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.report-bar a{color:var(--accent-ink);text-decoration:none;font-size:14px;font-weight:650;border:1px solid var(--accent);padding:6px 14px;border-radius:999px;transition:background .2s}
+.report-bar a:hover{background:var(--accent-soft)}
+.report-bar .doc-note{font-size:12px;color:var(--ink3);letter-spacing:.06em}
+main{max-width:960px;margin:0 auto;padding:48px 24px 96px}
+h1{font-size:clamp(26px,3.4vw,34px);line-height:1.25;margin:0 0 12px;letter-spacing:-.01em;font-weight:700}
+h2{font-size:24px;margin:40px 0 14px;padding-top:18px;border-top:1px solid var(--line);font-weight:700}
+h3{font-size:19px;margin:28px 0 10px;font-weight:700}
+h4{font-size:16px;margin:22px 0 8px;font-weight:700}
+p{margin:10px 0}
+a{color:var(--accent-ink)}
+ul,ol{margin:10px 0;padding-left:22px}
+li{margin:5px 0}
+blockquote{margin:14px 0;padding:12px 18px;background:var(--accent-soft);border-left:3px solid var(--accent);border-radius:0 10px 10px 0;color:var(--ink2)}
+code{font-family:ui-monospace,Consolas,monospace;font-size:.92em;background:var(--bg-soft);padding:2px 6px;border-radius:6px}
+pre{background:#1B1E27;color:#E6E9F2;padding:16px 18px;border-radius:12px;overflow-x:auto;line-height:1.6}
+pre code{background:none;color:inherit;padding:0}
+table{border-collapse:collapse;width:100%;margin:14px 0;font-size:14px;background:var(--white);display:block;overflow-x:auto}
+th,td{border:1px solid var(--line);padding:9px 12px;text-align:left;vertical-align:top}
+th{background:var(--accent-soft);color:var(--accent-ink);font-weight:700}
+tr:nth-child(even) td{background:#FAFAF8}
+hr{border:none;border-top:1px solid var(--line);margin:28px 0}
+strong{font-weight:700}
+img{max-width:100%;border-radius:10px}
+@media (max-width:640px){main{padding:28px 16px 64px}h1{font-size:25px}h2{font-size:21px}th,td{padding:7px 9px}}
+</style>
+</head>
+<body>
+<div class="report-top">
+  <div class="report-bar">
+    <a href="../index.html">← 返回作品集</a>
+    <span class="doc-note">项目报告 · 董凯作品集</span>
+  </div>
+</div>
+<main>
+<h1>即问 · AI 智能眼镜 — 市场与用户调研报告（综合版）</h1>
+<blockquote>
+<p>v1.0 ｜ 2026-08-28 ｜ 方法：桌面研究（IDC/群智/Wellsenn/GfK 等公开数据）+ 问卷（n=35）+ 内测（n=11）+ 技术实测
+用途：作品集 / 项目对外展示（内部原始报告见 reports/01-03、11）</p>
+</blockquote>
+<hr />
+<h2>一、调研背景与目标</h2>
+<p><strong>背景</strong>：AI 眼镜赛道 2025-2026 爆发（「百镜大战」），但主流产品功能堆叠、价格高企、续航焦虑。我们要做一个<strong>更聚焦</strong>的产品：无屏、单闭环「看着眼前、随口问、答案入耳」。</p>
+<p><strong>调研要回答 4 个问题</strong>：
+1. 赛道是否真实且增长？（市场）
+2. 目标用户是谁、要什么？（用户）
+3. 「无屏单闭环」在竞争中有没有差异化机会？（竞品）
+4. 值多少钱、愿不愿意用？（需求与付费）</p>
+<hr />
+<h2>二、调研方法</h2>
+<table>
+<thead>
+<tr>
+<th>方法</th>
+<th>样本/来源</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>桌面研究</td>
+<td>IDC / 群智 / Wellsenn / GfK / 洛图 / 行业媒体</td>
+<td>市场规模、增速、竞品格局</td>
+</tr>
+<tr>
+<td>问卷</td>
+<td><strong>35 人</strong>（8 题全选择，匿名）</td>
+<td>用户画像、场景、价格、内测意愿</td>
+</tr>
+<tr>
+<td>内测</td>
+<td><strong>11 人</strong>（手机模拟眼镜，5 天）</td>
+<td>真实使用：答对率、常用功能、满意度</td>
+</tr>
+<tr>
+<td>技术实测</td>
+<td>真实店铺/物品照片</td>
+<td>识别/评分/播报链路可行性</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>三、市场调研发现</h2>
+<h3>3.1 赛道高速增长（真实、确定）</h3>
+<ul>
+<li>2025 全球 AI 眼镜出货 846 万台，同比 <strong>+453%</strong>（Wellsenn XR）</li>
+<li>2026 中国 AI 眼镜出货预计 450-491 万台，+77.7%（IDC）；国内 AI 智能眼镜零售量 2025 同比 <strong>+786%</strong>（GfK）</li>
+<li>2030 全球 AI 眼镜出货预计 9000 万台（Wellsenn XR）</li>
+<li>中国首次将智能眼镜纳入国补范围（2026）</li>
+</ul>
+<h3>3.2 品类被巨头验证</h3>
+<ul>
+<li>Ray-Ban Meta 系列累计销量 <strong>700 万副</strong>（含 Oakley），2025 Q2 单季 72 万台、占全球 AI 眼镜 83%</li>
+<li>→ 证明「无屏 + 语音 + 拍摄」路线有真实大众需求</li>
+</ul>
+<h3>3.3 价格带机会</h3>
+<ul>
+<li>竞品价格：华为 2499 / 小米 1999-2999 / Rokid 3299+ / 讯飞 4299+</li>
+<li>主流「性价比带」在 1500-2500；<strong>我们问卷显示 80% 接受 500-2000（中位 ~1000）</strong> → 存在更亲民的切入空间</li>
+</ul>
+<hr />
+<h2>四、用户调研发现（问卷 n=35）</h2>
+<h3>4.1 目标用户画像</h3>
+<ul>
+<li><strong>18-35 岁占 83%</strong>（18-25 最多 49%），86% 用过 AI 大模型</li>
+<li>→ 年轻、AI 熟悉、愿意尝鲜的「日常佩戴」人群</li>
+</ul>
+<h3>4.2 核心需求排序</h3>
+<table>
+<thead>
+<tr>
+<th>需求</th>
+<th>占比</th>
+<th>产品对应</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>看到啥问啥</td>
+<td><strong>46%</strong></td>
+<td>单闭环核心</td>
+</tr>
+<tr>
+<td>景点/建筑讲解</td>
+<td>26%</td>
+<td>场景三族·旅行</td>
+</tr>
+<tr>
+<td>查餐厅评分/价格</td>
+<td>17%</td>
+<td>场景三族·餐饮</td>
+</tr>
+<tr>
+<td>语音助手</td>
+<td>11%</td>
+<td>基础能力</td>
+</tr>
+</tbody>
+</table>
+<h3>4.3 高频场景验证</h3>
+<ul>
+<li><strong>60% 想知道店铺评价</strong>（每次 37% + 经常 23%）→ 评分功能是刚需</li>
+<li>83% 逛街 1-3 小时 → 续航档位参考（日常 1.5h 偏短 → 建议 2h）</li>
+</ul>
+<h3>4.4 意愿与价格</h3>
+<ul>
+<li>佩戴意愿：94% 不排斥（愿意 49% + 看情况 46%）</li>
+<li>价格：80% 接受 500-2000</li>
+<li><strong>80% 愿参加内测</strong> → 招募无忧，需求真实</li>
+</ul>
+<hr />
+<h2>五、竞品调研发现</h2>
+<h3>5.1 两条路线</h3>
+<table>
+<thead>
+<tr>
+<th>路线</th>
+<th>代表</th>
+<th>优势</th>
+<th>代价</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>无屏（轻）</td>
+<td>Ray-Ban Meta / 小米 / 华为</td>
+<td>轻、续航长、价格亲民</td>
+<td>功能单一</td>
+</tr>
+<tr>
+<td>有屏（AR）</td>
+<td>Rokid / 讯飞 / 雷鸟 Air</td>
+<td>信息密度高</td>
+<td>重、贵、耗电</td>
+</tr>
+</tbody>
+</table>
+<h3>5.2 我们的差异化机会</h3>
+<ul>
+<li><strong>无屏阵营</strong>但<strong>更聚焦</strong>（只做「看见即答」一件事，不堆功能）</li>
+<li><strong>更便宜</strong>（500-2000 切入，低于主流 2000+）</li>
+<li><strong>续航可控</strong>（三模式档位，非「全天候」硬扛）</li>
+<li><strong>隐私透明</strong>（拍摄灯、帧不落盘、一键删除）</li>
+<li>首轮内测用户说「不如问豆包」→ 我们不做通用问答，做<strong>眼前场景的即时信息</strong>（识别+评分+讲解）</li>
+</ul>
+<hr />
+<h2>六、内测验证（n=11）</h2>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>数据</th>
+<th>结论</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>最常用</td>
+<td>查餐厅评分 45%</td>
+<td>评分场景成立</td>
+</tr>
+<tr>
+<td>答对率</td>
+<td>基本都对 18%（首轮）</td>
+<td><strong>识别是最大短板 → 已修复</strong>（拍照质量+意图理解）</td>
+</tr>
+<tr>
+<td>播报</td>
+<td>首轮杂音 → 已清零</td>
+<td>流式 TTS 可用</td>
+</tr>
+<tr>
+<td>推荐意愿</td>
+<td>不会 45%（首轮，主因准确率）</td>
+<td>修复后待二轮验证</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>七、关键洞察与结论</h2>
+<ol>
+<li><strong>赛道确定</strong>：AI 眼镜高速增长、品类被巨头验证、政策支持。</li>
+<li><strong>需求真实</strong>：目标用户（18-35、AI 熟悉）对「看见即答 + 店铺评分」有明确高频需求；80% 愿内测。</li>
+<li><strong>差异化可行</strong>：无屏 + 聚焦 + 亲民价 + 隐私透明，避开巨头功能堆叠区。</li>
+<li><strong>短板已知可修</strong>：识别准确率（已修）、延迟（已提速）、播报（已清杂音）。</li>
+<li><strong>定价</strong>：500-2000 主流接受，避开 2000+ 红海。</li>
+</ol>
+<p><strong>调研结论</strong>：赛道、需求、差异化、价格均验证成立；MVP 修复后具备二轮内测 + 硬件打样的条件。</p>
+<hr />
+<h2>附：数据来源清单</h2>
+<ul>
+<li>市场规模：IDC、群智咨询、Wellsenn XR、NIQ GfK、洛图科技、华经产业研究院</li>
+<li>竞品：公开报道/官网/行业媒体（2025-2026）</li>
+<li>问卷/内测：本项目自有（35 人问卷、11 人内测）<blockquote>
+<p>数据纪律：问卷与内测为真实回收数据；第三方数据标注来源；未实测项标注【待实测】。</p>
+</blockquote>
+</li>
+</ul>﻿</main>
+</body>
+</html>
