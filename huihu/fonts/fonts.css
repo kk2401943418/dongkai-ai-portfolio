@@ -1,0 +1,7 @@
+/* 本地字体（离线可用）。中文为思源宋体/思源黑体（Noto CJK SC）按页面字符子集化，改文案后运行 tools/build_fonts.py */
+@font-face{font-family:"HH Serif SC";src:url(HHSerifSC-Regular.woff2) format("woff2"),local("Noto Serif CJK SC"),local("Source Han Serif SC");font-weight:400;font-display:swap}
+@font-face{font-family:"HH Sans SC";src:url(HHSansSC-Regular.woff2) format("woff2"),local("Noto Sans CJK SC"),local("Source Han Sans SC");font-weight:300 500;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(CormorantGaramond-VF.woff2) format("woff2");font-weight:300 700;font-style:normal;font-display:swap}
+@font-face{font-family:"Cormorant Garamond";src:url(CormorantGaramond-Italic-VF.woff2) format("woff2");font-weight:300 700;font-style:italic;font-display:swap}
+@font-face{font-family:"Manrope";src:url(Manrope-VF.woff2) format("woff2");font-weight:200 800;font-display:swap}
+@font-face{font-family:"DM Mono";src:url(DMMono-Regular.woff2) format("woff2");font-weight:400;font-display:swap}

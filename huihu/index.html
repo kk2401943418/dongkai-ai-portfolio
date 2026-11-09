@@ -1,0 +1,600 @@
+<!doctype html>
+<html lang="zh-CN" data-tagline-set="2">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>回弧 HUIHU · Return Arc — L4 自动驾驶概念车原创内饰 · Kai 毕业设计</title>
+<meta name="description" content="回弧：L4 自动驾驶概念车原创内饰设计。Kai 毕业设计作品集。">
+<link rel="stylesheet" href="fonts/fonts.css">
+<link rel="stylesheet" href="vendor/lenis.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/editorial.css">
+</head>
+<body class="is-loading">
+
+<a class="skip-link" href="#mainContent">跳到正文</a>
+
+<!-- 全局层：细线网格 + 颗粒 -->
+<div class="gridlines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- 顶部导航 -->
+<header class="nav" data-nav-theme="dark">
+  <a class="nav__mark" href="#prologue" aria-label="回到封面">
+    <svg viewBox="0 0 40 16" aria-hidden="true"><polygon points="4,0.5 36,0.5 39.5,4 39.5,12 36,15.5 4,15.5 0.5,12 0.5,4"/></svg>
+    <span class="zh">回弧</span><span class="en">HUIHU</span>
+  </a>
+  <div class="nav__current"><span class="nav__num">01</span><span class="nav__label">序 · 回弧</span></div>
+  <button class="nav__toggle" type="button" aria-controls="chapterNav" aria-expanded="false">章节目录</button>
+  <nav id="chapterNav" class="nav__list" aria-label="章节">
+    <a href="#prologue">01</a><a href="#context">02</a><a href="#users">03</a><a href="#strategy">04</a><a href="#concept">05</a>
+    <a href="#form">06</a><a href="#steering">07</a><a href="#interaction">08</a><a href="#cmf">09</a><a href="#epilogue">10</a>
+  </nav>
+</header>
+
+<!-- 右侧进度 -->
+<aside class="rail" aria-hidden="true"><div class="rail__bar"><i></i></div></aside>
+
+<main id="mainContent" tabindex="-1">
+<!-- ========== 01 序 · 回弧 · 深 ========== -->
+<section id="prologue" class="sec cover cover--editorial" data-theme="dark" data-chapter="01" data-title="序 · 回弧">
+  <div class="cover__inner wrap">
+    <div class="cover__top"><span class="mono">KAI / INTERIOR DESIGN</span><span class="mono">THESIS PORTFOLIO · 2026</span></div>
+    <div class="cover__composition">
+      <div class="cover__title">
+        <p class="eyebrow">L4 自动驾驶概念车 · 原创内饰</p>
+        <h1 class="display" data-split>回弧</h1>
+        <p class="cover__en"><span class="cover__pin">HUIHU</span><span class="it">Return Arc</span></p>
+        <p class="cover__idea"><span data-tl="prologue-zh">驾驶离开时，空间回到人。</span><i data-tl="prologue-en">When driving steps away, the space returns to the person.</i></p>
+        <a class="editorial-link" href="#concept">查看草图推演 <span aria-hidden="true">↗</span></a>
+      </div>
+      <figure class="cover__plate">
+        <div class="cover__arthead mono"><span>DESIGN IN PROGRESS</span><span>DRIVER’S VIEW / V12</span></div>
+        <button class="art-zoom" type="button" data-full="assets/web/sketches/candidate_v12_color.webp" data-caption="v12 结构修订候选 · AI 辅助，基于 Kai 原稿；非终稿，非人机验证结果。" aria-label="放大 v12 结构修订候选上色稿">
+          <img src="assets/web/sketches/candidate_v12_color.webp" fetchpriority="high" decoding="async" width="1280" height="720" alt="回弧 v12 结构修订候选：长八边形三区大屏、近位方向盘与浅色座舱">
+          <span class="art-zoom__hint">放大查看 <span aria-hidden="true">＋</span></span>
+        </button>
+        <figcaption><span class="edition-tag">过程稿 · 非终稿</span><span>v12 结构修订候选 · AI 辅助</span><small>键区与层叠待精修，收纳与可达性待验证。</small></figcaption>
+      </figure>
+    </div>
+    <div class="cover__bottom"><p>以驾驶员为中心，探索人工驾驶与 L4 状态下的座舱关系。</p><dl class="cover__meta"><div><dt>设计</dt><dd>Kai</dd></div><div><dt>项目</dt><dd>原创内饰 · 毕业设计</dd></div></dl><a href="#context" class="cover__read mono">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a></div>
+  </div>
+</section>
+
+<div class="reel" data-theme="dark">
+  <div class="wrap-wide">
+    <figure class="vid vid--reel" data-reveal>
+      <video class="autovid" muted loop playsinline preload="metadata" poster="assets/video/huihu_loop_cover.webp" data-src-wide="assets/video/huihu_loop_16x9.mp4" data-src-tall="assets/video/huihu_loop_9x16.mp4" data-poster-tall="assets/video/huihu_loop_cover_9x16.webp" aria-label="「回弧」循环样片 v0"></video>
+      <figcaption class="vid__cap"><span class="mono">旧样片 v0 · 12s 循环</span><span class="oldtag">非最新方案</span><b>回弧 · HUIHU</b><em>06_video/huihu_loop_16x9.mp4 · 竖屏 huihu_loop_9x16.mp4</em></figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="seam seam--d2l" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,160 Q800,20 1600,160" fill="none"/></svg></div>
+
+<!-- ========== 02 背景与问题 · 浅 ========== -->
+<section id="context" class="sec" data-theme="light" data-chapter="02" data-title="背景与问题">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">02</span>
+      <div>
+        <p class="sec__en">Context &amp; Problem</p>
+        <h2 class="sec__title" data-reveal>背景与问题</h2>
+      </div>
+      <p class="sec__lead" data-reveal>L4 已经上路，私家车座舱还没准备好。<span class="lead-en">L4 is already on the road. The private-car cabin is not yet ready for it.</span><span class="src">文案据 08_copy/ch02_context.md</span></p>
+    </header>
+
+    <div class="ctx">
+      <article class="ctx__item" data-reveal><span class="mono">01</span><h3 class="h3">L4 来了，但先来的是出租车</h3><p class="ctx__en">L4 Has Arrived, as a Taxi First</p><p>L4 已在限定区域规模化运营：Waymo 每周提供 40 万次以上付费出行<sup class="fn"><a href="#c02-S19" id="c02-r-S19-1" aria-label="来源 S19">S19</a></sup>，萝卜快跑覆盖 28 城、全无人驾驶里程超 2.4 亿公里<sup class="fn"><a href="#c02-S16" id="c02-r-S16-1" aria-label="来源 S16">S16</a></sup>，文远知行的 L4 车队约 3,400 台<sup class="fn"><a href="#c02-S18" id="c02-r-S18-1" aria-label="来源 S18">S18</a></sup>。私家车这边，中国首批 L3 车型 2025 年 12 月才获附条件准入，且限定在指定路段<sup class="fn"><a href="#c02-S3" id="c02-r-S3-1" aria-label="来源 S3">S3</a></sup>。面向私家车的 L4 座舱，仍是一个前瞻命题。</p><p class="en">L4 already runs at scale within defined areas: Waymo delivers over 400,000 paid rides a week<sup class="fn"><a href="#c02-S19" id="c02-r-S19-2" aria-label="来源 S19">S19</a></sup>, Apollo Go operates in 28 cities with more than 240 million fully driverless kilometres<sup class="fn"><a href="#c02-S16" id="c02-r-S16-2" aria-label="来源 S16">S16</a></sup>, and WeRide runs an L4 fleet of about 3,400 vehicles<sup class="fn"><a href="#c02-S18" id="c02-r-S18-2" aria-label="来源 S18">S18</a></sup>. For private cars, China granted its first conditional L3 approvals only in December 2025, limited to designated roads<sup class="fn"><a href="#c02-S3" id="c02-r-S3-2" aria-label="来源 S3">S3</a></sup>. An L4 cabin for the private car is still a question about the future.</p></article>
+      <article class="ctx__item" data-reveal><span class="mono">02</span><h3 class="h3">方向盘第一次可以离开</h3><p class="ctx__en">The Wheel Can Finally Step Away</p><p>GB 17675-2025 删除了转向系必须保留机械连接的强制要求，并对线控转向提出失效降级与报警要求，2026 年 7 月 1 日实施<sup class="fn"><a href="#c02-S6" id="c02-r-S6-1" aria-label="来源 S6">S6</a></sup>。没有了机械管柱，方向盘才有收纳的可能。</p><p class="en">GB 17675-2025, in force from 1 July 2026, removes the requirement for a mechanical steering link and sets fallback and warning rules for steer-by-wire<sup class="fn"><a href="#c02-S6" id="c02-r-S6-2" aria-label="来源 S6">S6</a></sup>. Without a mechanical column, the wheel can finally be stowed.</p></article>
+      <article class="ctx__item ctx__item--wide" data-reveal><span class="mono">03</span><h3 class="h3">三个问题</h3><p class="ctx__en">Three Problems</p><ol class="ctx__problems"><li><span class="mono">P1</span><p><b>谁在驾驶，并不总是清楚。</b>研究发现，驾驶人对“干预后谁在控车”的理解与量产车的实际逻辑存在错位<sup class="fn"><a href="#c02-S35" id="c02-r-S35-1" aria-label="来源 S35">S35</a></sup>；逐级切换式 HMI 的模式混淆率是按功能分区 HMI 的 2 倍，加入视觉反馈后明显下降<sup class="fn"><a href="#c02-S36" id="c02-r-S36-1" aria-label="来源 S36">S36</a></sup>。GB 44721-2026 也要求明确提示系统的就绪、激活、退出状态，并告知用户角色转换<sup class="fn"><a href="#c02-S7" id="c02-r-S7-1" aria-label="来源 S7">S7</a></sup>。</p><p class="en"><b>Who is driving is not always clear.</b> Drivers&#x27; understanding of who controls the car after an intervention does not match how production cars actually behave<sup class="fn"><a href="#c02-S35" id="c02-r-S35-2" aria-label="来源 S35">S35</a></sup>; a level-by-level HMI produces twice the mode confusion of a function-based one, and visual feedback reduces it markedly<sup class="fn"><a href="#c02-S36" id="c02-r-S36-2" aria-label="来源 S36">S36</a></sup>. GB 44721-2026 requires clear ready, active and exit states, and that users be told when their role changes<sup class="fn"><a href="#c02-S7" id="c02-r-S7-2" aria-label="来源 S7">S7</a></sup>.</p></li><li><span class="mono">P2</span><p><b>屏幕吞掉了按键。</b>触屏中控带来更多、更长的视线离路<sup class="fn"><a href="#c02-S37" id="c02-r-S37-1" aria-label="来源 S37">S37</a></sup>；Euro NCAP 2026 起要求转向灯、双闪等基础功能使用直接物理输入<sup class="fn"><a href="#c02-S20" id="c02-r-S20-1" aria-label="来源 S20">S20</a></sup><sup class="fn"><a href="#c02-S21" id="c02-r-S21-1" aria-label="来源 S21">S21</a></sup>。</p><p class="en"><b>Screens have swallowed the buttons.</b> Touch-based centre stacks draw longer and more frequent glances away from the road<sup class="fn"><a href="#c02-S37" id="c02-r-S37-2" aria-label="来源 S37">S37</a></sup>, and from 2026 Euro NCAP requires direct physical inputs for basic functions such as indicators and hazard lights<sup class="fn"><a href="#c02-S20" id="c02-r-S20-2" aria-label="来源 S20">S20</a></sup><sup class="fn"><a href="#c02-S21" id="c02-r-S21-2" aria-label="来源 S21">S21</a></sup>.</p></li><li><span class="mono">P3</span><p><b>空出来的时间，座舱接不住。</b>一项覆盖 47 项研究的荟萃分析显示，非驾驶活动出现率从 L3 的 27% 升至 L4 的 41%<sup class="fn"><a href="#c02-S30" id="c02-r-S30-1" aria-label="来源 S30">S30</a></sup>；另一项调查发现，人们设想在自动驾驶中工作、阅读、娱乐，却认为车内时间更不“有用”，作者归因于缺少合适的内饰<sup class="fn"><a href="#c02-S33" id="c02-r-S33-1" aria-label="来源 S33">S33</a></sup>。</p><p class="en"><b>The cabin cannot hold the time it frees up.</b> A meta-analysis of 47 studies shows non-driving activities rising from 27% at L3 to 41% at L4<sup class="fn"><a href="#c02-S30" id="c02-r-S30-2" aria-label="来源 S30">S30</a></sup>; another survey found people expect to work, read and be entertained in automated cars, yet rate the time as less useful, which the authors attribute to unsuitable interiors<sup class="fn"><a href="#c02-S33" id="c02-r-S33-2" aria-label="来源 S33">S33</a></sup>.</p></li></ol></article>
+    </div>
+
+    <div class="refs">
+      <div class="refs__head"><span class="mono">Reference · 竞品 / 案例参考</span><h3 class="h3">可收缩方向盘与超宽屏座舱的公开案例</h3><p>以下仅列官方资料写明的信息，分析结论待 Kai 撰写 <span class="tag-ph">[占位文案]</span>。<span class="src">据 01_research/可收缩方向盘实例.md · L4概念车内饰参考.md</span></p></div>
+      <div class="refs__grid">
+      <figure class="ref" data-reveal>
+        <div class="ref__img"><img src="assets/web/research/ref01_audi_grandsphere.jpg" alt="Audi grandsphere concept 官方图（第三方，版权归原厂）" loading="lazy"></div>
+        <figcaption><span class="mono">R01 · 2021</span><h4>Audi grandsphere concept</h4><p>L4 时方向盘与踏板收起；投影显示在手动驾驶时分驾驶员 / 副驾两区，L4 时铺满全宽。</p><p class="ref__src">图 / 资料来源：<a href="https://media.audiusa.com/models/grandsphere" target="_blank" rel="noopener">Audi USA 媒体站 · media.audiusa.com/models/grandsphere</a> · 版权归原厂，仅作毕设参考<em>01_research/images/Audi_grandsphere/</em></p></figcaption>
+      </figure>
+      <figure class="ref" data-reveal>
+        <div class="ref__img"><img src="assets/web/research/ref02_autoliv_foldable.jpg" alt="Autoliv × Tensor 可折叠方向盘 官方图（第三方，版权归原厂）" loading="lazy"></div>
+        <figcaption><span class="mono">R02 · 2026</span><h4>Autoliv × Tensor 可折叠方向盘</h4><p>方向盘折进仪表台；展开时使用方向盘内气囊，收起后启用仪表台内气囊。</p><p class="ref__src">图 / 资料来源：<a href="https://www.autoliv.com/safety-solutions/steering-wheels/foldable-steering-wheel" target="_blank" rel="noopener">Autoliv 产品页 · autoliv.com</a> · 版权归原厂，仅作毕设参考<em>01_research/images/Autoliv_Tensor_可折叠方向盘/</em></p></figcaption>
+      </figure>
+      <figure class="ref" data-reveal>
+        <div class="ref__img"><img src="assets/web/research/ref03_zf_lifetec.jpg" alt="ZF LIFETEC Transformable Steering Wheel 官方图（第三方，版权归原厂）" loading="lazy"></div>
+        <figcaption><span class="mono">R03 · 2025</span><h4>ZF LIFETEC Transformable Steering Wheel</h4><p>内置电驱，轮圈向下折叠约 2 秒；带防夹；中央光带以颜色区分当前模式。</p><p class="ref__src">图 / 资料来源：<a href="https://zf-lifetec.com/press-releases/zf-lifetec-transformable-steering-wheel/" target="_blank" rel="noopener">ZF LIFETEC 新闻稿 · zf-lifetec.com</a> · 版权归原厂，仅作毕设参考<em>01_research/images/ZF_LIFETEC_可变形方向盘/</em></p></figcaption>
+      </figure>
+      <figure class="ref" data-reveal>
+        <div class="ref__img"><img src="assets/web/research/ref04_peugeot_elegend.jpg" alt="Peugeot e-LEGEND concept 官方图（第三方，版权归原厂）" loading="lazy"></div>
+        <figcaption><span class="mono">R04 · 2018</span><h4>Peugeot e-LEGEND concept</h4><p>49 英寸中央屏；进入自动驾驶后方向盘降到音响条下方。</p><p class="ref__src">图 / 资料来源：<a href="https://www.media.stellantis.com/em-en/peugeot/press/peugeot-e-legend-concept" target="_blank" rel="noopener">Stellantis 媒体站 · media.stellantis.com</a> · 版权归原厂，仅作毕设参考<em>01_research/images/Peugeot_e-LEGEND/</em></p></figcaption>
+      </figure>
+      <figure class="ref" data-reveal>
+        <div class="ref__img"><img src="assets/web/research/ref05_yanfeng_xim27.jpg" alt="延锋 XiM27（供应商概念座舱） 官方图（第三方，版权归原厂）" loading="lazy"></div>
+        <figcaption><span class="mono">R05 · 2026</span><h4>延锋 XiM27（供应商概念座舱）</h4><p>35.4 英寸全景显示，以空间光叠加成像呈现多层景深；全折叠方向盘收进仪表板。</p><p class="ref__src">图 / 资料来源：<a href="https://www.yanfeng.com/cn/xim27" target="_blank" rel="noopener">延锋官网 · yanfeng.com/cn/xim27</a> · 版权归原厂，仅作毕设参考<em>01_research/images/延锋_XiM27/</em></p></figcaption>
+      </figure>
+      <figure class="ref" data-reveal>
+        <div class="ref__img"><img src="assets/web/research/ref06_cadillac_opulent.jpg" alt="Cadillac Opulent Velocity 官方图（第三方，版权归原厂）" loading="lazy"></div>
+        <figcaption><span class="mono">R06 · 2024</span><h4>Cadillac Opulent Velocity</h4><p>方向盘和踏板可收起；触碰多功能控制器后从 L4 的 Opulent 模式切换到 Velocity 驾驶模式。</p><p class="ref__src">图 / 资料来源：<a href="https://news.gm.com/home.detail.html/Pages/news/us/en/2024/aug/opulent.html" target="_blank" rel="noopener">GM 官方新闻 · news.gm.com</a> · 版权归原厂，仅作毕设参考<em>01_research/images/Cadillac_Opulent_Velocity/</em></p></figcaption>
+      </figure>
+      </div>
+    </div>
+    <div class="split">
+      <div>
+      <figure class="ph" style="--ar:4/3" data-src="assets/research/moodboard/moodboard_01_web" data-reveal>
+        <div class="ph__art"></div>
+        <figcaption class="ph__tag"><b>占位 · 待替换：</b>调研情绪板 / 参考图集<em>应来自 01_research → moodboard/moodboard_01_web.jpg</em></figcaption>
+      </figure>
+      <p class="mono" style="font-size:11px;opacity:.6;margin-top:10px;line-height:1.6">调研情绪板 · 12 张均为各品牌官方参考图，版权归原厂，逐张出处见 01_research/moodboard/README.md · 上线前需核实授权</p>
+      </div>
+      <div class="dq" data-reveal><span class="mono">Design Question · 设计问题</span><p class="dq__zh">一辆既能人工驾驶、也能交给 L4 的私家车，座舱如何让人始终清楚由谁驾驶，操作随手可及，并把空出来的时间还给人？</p><p class="en">In a private car that can be driven by hand or handed to L4, how can the cabin keep it clear who is driving, keep controls within reach, and give the freed-up time back to the people inside?</p></div>
+    </div>
+    <aside class="fnotes" data-reveal><p class="mono fnotes__h">Sources · 本章来源<span class="src">据 01_research/背景_趋势_场景.md 来源表 · 检索日 2026-11-01</span></p><ol><li id="c02-S19"><span class="fnotes__n">S19</span><span class="fnotes__t">Waymo · <a href="https://waymo.com/blog/2026/02/waymo-raises-usd16-billion-investment-round/" target="_blank" rel="noopener">Accelerating our global growth: Waymo raises $16 billion investment round</a><span class="fnotes__d">2026-02-02</span></span><a class="fnotes__back" href="#c02-r-S19-1" aria-label="回到正文">↑</a></li><li id="c02-S16"><span class="fnotes__n">S16</span><span class="fnotes__t">百度 · <a href="https://ir.baidu.com/news-releases/news-release-details/baidu-announces-second-quarter-2026-results/" target="_blank" rel="noopener">Baidu Announces Second Quarter 2026 Results</a><span class="fnotes__d">2026-08-18</span></span><a class="fnotes__back" href="#c02-r-S16-1" aria-label="回到正文">↑</a></li><li id="c02-S18"><span class="fnotes__n">S18</span><span class="fnotes__t">文远知行 · <a href="https://ir.weride.ai/news-releases/news-release-details/accelerating-european-expansion-through-proven-asset-light-model/" target="_blank" rel="noopener">WeRide Announces Second Quarter and First Half 2026 Unaudited Financial Results</a><span class="fnotes__d">2026-08-12</span></span><a class="fnotes__back" href="#c02-r-S18-1" aria-label="回到正文">↑</a></li><li id="c02-S3"><span class="fnotes__n">S3</span><span class="fnotes__t">工信部装备工业一司 · <a href="https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2025/art_f734c7074580470593d4018742997640.html" target="_blank" rel="noopener">工业和信息化部许可两款L3级自动驾驶车型产品</a><span class="fnotes__d">2025-12-15</span></span><a class="fnotes__back" href="#c02-r-S3-1" aria-label="回到正文">↑</a></li><li id="c02-S6"><span class="fnotes__n">S6</span><span class="fnotes__t">市场监管总局、国标委；全国汽标委；中国质量新闻网 · <a href="https://openstd.samr.gov.cn/bzgk/gb/newGbInfo?hcno=31A8C8FEC38342D2FE8F3F2ECEDFB53F" target="_blank" rel="noopener">GB 17675-2025 汽车转向系 基本要求</a> <a class="fnotes__x" href="https://std.samr.gov.cn/gb/search/gbDetailed?id=44F3E6F8203FB68DE06397BE0A0A3836" target="_blank" rel="noopener">[2]</a> <a class="fnotes__x" href="https://www.catarc.org.cn/xwdt/gzdt/707879860011077.html" target="_blank" rel="noopener">[3]</a> <a class="fnotes__x" href="https://www.cqn.com.cn/auto/content/2025-12/03/content_9134093.htm" target="_blank" rel="noopener">[4]</a><span class="fnotes__d">2025-12-02 发布</span></span><a class="fnotes__back" href="#c02-r-S6-1" aria-label="回到正文">↑</a></li><li id="c02-S35"><span class="fnotes__n">S35</span><span class="fnotes__t">Kim, Novakazi, van Grondelle, van Egmond, Happee · <a href="https://doi.org/10.1016/j.apergo.2024.104369" target="_blank" rel="noopener">Who is performing the driving tasks after interventions? <i>Applied Ergonomics</i></a><span class="fnotes__d">2024-11</span></span><a class="fnotes__back" href="#c02-r-S35-1" aria-label="回到正文">↑</a></li><li id="c02-S36"><span class="fnotes__n">S36</span><span class="fnotes__t">Eom &amp; Lee · <a href="https://academic.oup.com/jcde/article/9/5/1995/6679564" target="_blank" rel="noopener">Mode confusion of human–machine interfaces for automated vehicles, <i>JCDE</i> 9(5)</a><span class="fnotes__d">2022-08-31</span></span><a class="fnotes__back" href="#c02-r-S36-1" aria-label="回到正文">↑</a></li><li id="c02-S7"><span class="fnotes__n">S7</span><span class="fnotes__t">工信部装备工业一司 · <a href="https://www.miit.gov.cn/jgsj/zbys/qcgy/art/2026/art_a1d2072374884287b67048a77560014e.html" target="_blank" rel="noopener">《智能网联汽车 自动驾驶系统安全要求》（GB 44721—2026）强制性国家标准正式发布</a><span class="fnotes__d">2026-08-04</span></span><a class="fnotes__back" href="#c02-r-S7-1" aria-label="回到正文">↑</a></li><li id="c02-S37"><span class="fnotes__n">S37</span><span class="fnotes__t">Anderson, Antona-Makoshi, Klauer（VTTI / NSTSCE） · <a href="https://hdl.handle.net/10919/119479" target="_blank" rel="noopener">Human-Machine Interface Review: A Comparison of Legacy and Touch-Based Center Stack Controls</a><span class="fnotes__d">2024-04-19</span></span><a class="fnotes__back" href="#c02-r-S37-1" aria-label="回到正文">↑</a></li><li id="c02-S20"><span class="fnotes__n">S20</span><span class="fnotes__t">Euro NCAP · <a href="https://www.euroncap.com/press-media/euro-ncap-announces-2026-protocol-changes-to-tackle-modern-driving-risks/" target="_blank" rel="noopener">Euro NCAP announces 2026 protocol changes to tackle modern driving risks</a><span class="fnotes__d">2025-11-26</span></span><a class="fnotes__back" href="#c02-r-S20-1" aria-label="回到正文">↑</a></li><li id="c02-S21"><span class="fnotes__n">S21</span><span class="fnotes__t">Euro NCAP · <a href="https://www.euroncap.com/press-media/buttons-are-back-for-basic-functions-euro-ncap-confirms-in-testing/" target="_blank" rel="noopener">Buttons are back for basic functions Euro NCAP confirms in testing</a><span class="fnotes__d">2026-10-12</span></span><a class="fnotes__back" href="#c02-r-S21-1" aria-label="回到正文">↑</a></li><li id="c02-S30"><span class="fnotes__n">S30</span><span class="fnotes__t">Cai, Anjani, Withey, Vledder, Song, Vink（TU Delft / JLR） · <a href="https://www.mdpi.com/2076-3417/14/20/9442" target="_blank" rel="noopener">Changes in Non-Driving-Related Activities from Conditional to Full Automation and Their Implications for Interior Design: A Systematic Review and Meta-Analysis, <i>Appl. Sci.</i> 14(20):9442</a><span class="fnotes__d">2024-10-16</span></span><a class="fnotes__back" href="#c02-r-S30-1" aria-label="回到正文">↑</a></li><li id="c02-S33"><span class="fnotes__n">S33</span><span class="fnotes__t">Acharya &amp; Singleton · <a href="https://findingspress.org/article/92087" target="_blank" rel="noopener">Autonomous Driving or Teleportation? <i>Findings</i></a><span class="fnotes__d">2024-01-17</span></span><a class="fnotes__back" href="#c02-r-S33-1" aria-label="回到正文">↑</a></li></ol></aside>
+  </div>
+</section>
+
+<div class="seam seam--l2d" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,40 Q800,180 1600,40" fill="none"/></svg></div>
+
+<!-- ========== 03 用户与场景 · 深 ========== -->
+<section id="users" class="sec" data-theme="dark" data-chapter="03" data-title="用户与场景">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">03</span>
+      <div>
+        <p class="sec__en">Users &amp; Scenarios</p>
+        <h2 class="sec__title" data-reveal>用户与场景</h2>
+      </div>
+      <p class="sec__lead" data-reveal>同一辆车里，有时开车，有时被车带着走。<span class="lead-en">In the same car, sometimes you drive, and sometimes the car carries you.</span><span class="src">文案据 08_copy/ch03_users.md</span></p>
+    </header>
+
+    <div class="persona" data-reveal>
+      <figure class="ph" style="--ar:4/3" data-src="assets/research/persona"><div class="ph__art"></div><span class="ph__cap"><b>图注</b>用户画像与旅程（待 Kai 用户研究）。<i>Persona and journey (pending Kai&#x27;s user research).</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>目标用户画像 / 用户旅程<em>应来自 01_research → persona.jpg</em></figcaption></figure>
+      <div class="persona__text">
+        <div class="ph-note"><span class="mono">Who It Is For · 目标用户</span><p class="tag-ph">[占位文案] 目标用户描述待 Kai 的用户画像与 L4 情景分析到位后填写。</p></div>
+        <div class="prose"><h3 class="h3">L4 中，人们想做什么</h3><p class="ctx__en">What People Want to Do in L4</p><p>荟萃分析显示，L4 中最常见的是看风景（约 80%）与被动娱乐（约 78%），也有人睡觉（约 31%）或用电脑工作（约 26%）<sup class="fn"><a href="#c03-S30" id="c03-r-S30-1" aria-label="来源 S30">S30</a></sup>。在仍保留方向盘的 L4 中，超过八成的人选择看向窗外，部分原因是想保持对路况的感知<sup class="fn"><a href="#c03-S30" id="c03-r-S30-2" aria-label="来源 S30">S30</a></sup>。</p><p class="en">In L4, the most common activities are looking at the scenery (about 80%) and passive entertainment (about 78%); some sleep (about 31%) or work on a laptop (about 26%)<sup class="fn"><a href="#c03-S30" id="c03-r-S30-3" aria-label="来源 S30">S30</a></sup>. Where L4 cars keep a steering wheel, more than 80% choose to look out of the window, partly to stay aware of the road<sup class="fn"><a href="#c03-S30" id="c03-r-S30-4" aria-label="来源 S30">S30</a></sup>.</p><p>信任仍是门槛：2025 年仅 13% 的美国驾驶人表示信任自动驾驶车<sup class="fn"><a href="#c03-S27" id="c03-r-S27-1" aria-label="来源 S27">S27</a></sup>。</p><p class="en">Trust is still the barrier: in 2025 only 13% of US drivers said they trust self-driving vehicles<sup class="fn"><a href="#c03-S27" id="c03-r-S27-2" aria-label="来源 S27">S27</a></sup>.</p></div>
+      </div>
+    </div>
+    <div class="scenes3">
+      <figure class="ph" style="--ar:4/5" data-src="assets/visuals/03_场景图/s1_day" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>白天通勤</b>快速路拥堵段切入 L4，方向盘收起，左区让位，中区显示日程与消息。<i>On a congested expressway the car switches to L4: the wheel stows, the left zone steps back, and the centre shows schedule and messages.</i><small class="ph__basis">依据 <sup class="fn"><a href="#c03-S3" id="c03-r-S3-1" aria-label="来源 S3">S3</a></sup><sup class="fn"><a href="#c03-S31" id="c03-r-S31-1" aria-label="来源 S31">S31</a></sup><sup class="fn"><a href="#c03-S32" id="c03-r-S32-1" aria-label="来源 S32">S32</a></sup>，L4 通勤为外推</small></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>场景 · 白天通勤<em>05_visuals/03_场景图 → s1_day.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:4/5" data-src="assets/visuals/03_场景图/s2_night" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>夜间</b><span class="assume">设计假设 · Design assumption</span>灯光调暗，屏幕只留必要状态。（设计假设）<i>Lights dim; the display keeps only essential status. (Design assumption)</i><small class="ph__basis">依据 运营可行性<sup class="fn"><a href="#c03-S17" id="c03-r-S17-1" aria-label="来源 S17">S17</a></sup><sup class="fn"><a href="#c03-S18" id="c03-r-S18-1" aria-label="来源 S18">S18</a></sup>；用户行为无一手数据</small></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>场景 · 夜间<em>05_visuals/03_场景图 → s2_night.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:4/5" data-src="assets/visuals/03_场景图/s3_rest" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>休息娱乐</b>驾驶员后倾小憩，副驾在右区娱乐，中区共享内容。<i>The driver reclines to rest; the passenger enjoys the right zone; the centre shares content.</i><small class="ph__basis">依据 <sup class="fn"><a href="#c03-S5" id="c03-r-S5-1" aria-label="来源 S5">S5</a></sup><sup class="fn"><a href="#c03-S30" id="c03-r-S30-5" aria-label="来源 S30">S30</a></sup><sup class="fn"><a href="#c03-S24" id="c03-r-S24-1" aria-label="来源 S24">S24</a></sup></small></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>场景 · 休息娱乐<em>05_visuals/03_场景图 → s3_rest.jpg</em></figcaption></figure>
+    </div>
+    <p class="scenes__more">其余场景（高速长途、驻车等候、紧急降级）待补充；驻车等候为设计假设。<i>Further scenarios (long-distance motorway, parked waiting, emergency fallback) to follow; parked waiting is a design assumption.</i></p>
+
+    <h3 class="h3 sb-title">故事板 <span class="mono">Storyboard</span></h3>
+    <div class="story">
+      <figure class="ph" style="--ar:16/10" data-src="assets/visuals/05_故事板/sb1" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>上车：方向盘展开，座舱进入人工驾驶。<i>Boarding: the wheel is deployed; manual mode.</i></span><figcaption class="ph__tag"><b>01 上车 · 占位</b><em>05_visuals/05_故事板 → sb1.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:16/10" data-src="assets/visuals/05_故事板/sb2" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>人工驾驶：左区显示驾驶主控信息。<i>Manual driving: the left zone carries driving information.</i></span><figcaption class="ph__tag"><b>02 人工驾驶 · 占位</b><em>05_visuals/05_故事板 → sb2.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:16/10" data-src="assets/visuals/05_故事板/sb3" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>切换 L4：方向盘后退、躺平、入槽，三区重新分配。<i>Switch to L4: the wheel draws back, lies flat and stows; the three zones rearrange.</i></span><figcaption class="ph__tag"><b>03 切 L4 · 占位</b><em>05_visuals/05_故事板 → sb3.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:16/10" data-src="assets/visuals/05_故事板/sb4" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>门板触控：手在门边按下按钮，门板不显示状态。<i>Door touch: a hand presses a control at the door; the door shows no status.</i></span><figcaption class="ph__tag"><b>04 门板触控 · 占位</b><em>05_visuals/05_故事板 → sb4.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:16/10" data-src="assets/visuals/05_故事板/sb5" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>大屏反馈：对应分区给出明确回应。<i>Display feedback: the matching zone responds clearly.</i></span><figcaption class="ph__tag"><b>05 大屏反馈 · 占位</b><em>05_visuals/05_故事板 → sb5.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:16/10" data-src="assets/visuals/05_故事板/sb6" data-reveal><div class="ph__art"></div><figcaption class="ph__tag"><b>06 下车 · 占位（图注待 Demo 设定确认）</b><em>05_visuals/05_故事板 → sb6.jpg</em></figcaption></figure>
+    </div>
+    <aside class="fnotes" data-reveal><p class="mono fnotes__h">Sources · 本章来源<span class="src">据 01_research/背景_趋势_场景.md 来源表 · 检索日 2026-11-01</span></p><ol><li id="c03-S30"><span class="fnotes__n">S30</span><span class="fnotes__t">Cai, Anjani, Withey, Vledder, Song, Vink（TU Delft / JLR） · <a href="https://www.mdpi.com/2076-3417/14/20/9442" target="_blank" rel="noopener">Changes in Non-Driving-Related Activities from Conditional to Full Automation and Their Implications for Interior Design: A Systematic Review and Meta-Analysis, <i>Appl. Sci.</i> 14(20):9442</a><span class="fnotes__d">2024-10-16</span></span><a class="fnotes__back" href="#c03-r-S30-1" aria-label="回到正文">↑</a></li><li id="c03-S27"><span class="fnotes__n">S27</span><span class="fnotes__t">AAA · <a href="https://newsroom.aaa.com/2025/02/aaa-fear-in-self-driving-vehicles-persists/" target="_blank" rel="noopener">AAA: Fear in Self-Driving Vehicles Persists</a><span class="fnotes__d">2025-02-25</span></span><a class="fnotes__back" href="#c03-r-S27-1" aria-label="回到正文">↑</a></li><li id="c03-S3"><span class="fnotes__n">S3</span><span class="fnotes__t">工信部装备工业一司 · <a href="https://www.miit.gov.cn/xwfb/gxdt/sjdt/art/2025/art_f734c7074580470593d4018742997640.html" target="_blank" rel="noopener">工业和信息化部许可两款L3级自动驾驶车型产品</a><span class="fnotes__d">2025-12-15</span></span><a class="fnotes__back" href="#c03-r-S3-1" aria-label="回到正文">↑</a></li><li id="c03-S31"><span class="fnotes__n">S31</span><span class="fnotes__t">Tian, Feng, Timmermans, Yao · <a href="https://doi.org/10.1016/j.tra.2024.104165" target="_blank" rel="noopener">What to do with commuting time when driving autonomous vehicles? <i>TR Part A</i> 187</a><span class="fnotes__d">2024-09</span></span><a class="fnotes__back" href="#c03-r-S31-1" aria-label="回到正文">↑</a></li><li id="c03-S32"><span class="fnotes__n">S32</span><span class="fnotes__t">Dai, Zheng, Ma, Li · <a href="https://doi.org/10.1016/j.tra.2025.104602" target="_blank" rel="noopener">How will travel time use and perception be modified by autonomous vehicles? <i>TR Part A</i> 199</a><span class="fnotes__d">2025-09</span></span><a class="fnotes__back" href="#c03-r-S32-1" aria-label="回到正文">↑</a></li><li id="c03-S17"><span class="fnotes__n">S17</span><span class="fnotes__t">小马智行 · <a href="https://ir.pony.ai/news-releases/news-release-details/pony-ai-inc-reports-second-quarter-2026-financial-results-total" target="_blank" rel="noopener">PONY AI Inc. Reports Second Quarter 2026 Financial Results</a><span class="fnotes__d">2026-08-18</span></span><a class="fnotes__back" href="#c03-r-S17-1" aria-label="回到正文">↑</a></li><li id="c03-S18"><span class="fnotes__n">S18</span><span class="fnotes__t">文远知行 · <a href="https://ir.weride.ai/news-releases/news-release-details/accelerating-european-expansion-through-proven-asset-light-model/" target="_blank" rel="noopener">WeRide Announces Second Quarter and First Half 2026 Unaudited Financial Results</a><span class="fnotes__d">2026-08-12</span></span><a class="fnotes__back" href="#c03-r-S18-1" aria-label="回到正文">↑</a></li><li id="c03-S5"><span class="fnotes__n">S5</span><span class="fnotes__t">市场监管总局、国标委 · <a href="https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=4754CB1B7AD798F288C52D916BFECA34" target="_blank" rel="noopener">GB/T 40429-2021 汽车驾驶自动化分级</a> <a class="fnotes__x" href="https://www.catarc.org.cn/qbw/fbw/fbwlb/znwlqc/xwdt/3334.html" target="_blank" rel="noopener">[2]</a><span class="fnotes__d">2021-08-20 发布</span></span><a class="fnotes__back" href="#c03-r-S5-1" aria-label="回到正文">↑</a></li><li id="c03-S24"><span class="fnotes__n">S24</span><span class="fnotes__t">J.D. Power 君迪 · <a href="https://china.jdpower.com/zh-hans/press-releases/2026nianzhongguoqichezhinenghuatiyanyanjiu" target="_blank" rel="noopener">2026年中国汽车智能化体验研究（TXI）</a><span class="fnotes__d">2026-05-28</span></span><a class="fnotes__back" href="#c03-r-S24-1" aria-label="回到正文">↑</a></li></ol></aside>
+  </div>
+</section>
+
+<div class="seam seam--d2l" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,160 Q800,20 1600,160" fill="none"/></svg></div>
+
+<!-- ========== 04 设计策略 · 浅（冷调） ========== -->
+<section id="strategy" class="sec sec--cool" data-theme="light" data-chapter="04" data-title="设计策略">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">04</span>
+      <div>
+        <p class="sec__en">Design Strategy</p>
+        <h2 class="sec__title" data-reveal>设计策略</h2>
+      </div>
+      <p class="sec__lead" data-reveal>三条策略，回应同一个问题：当驾驶时有时无，座舱如何保持秩序。<span class="lead-en">Three strategies answer one question: how a cabin keeps its order when driving comes and goes.</span><span class="src">文案据 08_copy/ch04_strategy.md</span></p>
+    </header>
+
+    <ol class="strats">
+      <li data-reveal><span class="strats__n">S1</span><h3>一盘两态</h3><p class="strats__en">One Wheel, Two Modes</p><p>方向盘展开即人工驾驶，收起即进入 L4。模式切换由一个看得见的实体动作完成，驾驶员不必读屏也知道当前由谁驾驶。</p><p class="en">Deployed, the wheel means manual driving; stowed, it means L4. The change of mode is a visible physical act, so the driver knows who is in control without reading a screen.</p></li>
+      <li data-reveal><span class="strats__n">S2</span><h3>屏有分区，键有其位</h3><p class="strats__en">Zoned Display, Placed Controls</p><p>大连屏为规则长八边形，分为驾驶主控、中央共享、副驾娱乐三区，状态只在这里显示。操作分两处：基础驾驶功能（双闪、SOS、转向灯、挡位、驾驶辅助激活等）集中在驾驶员左侧的实体键区，位置固定、带触觉反馈；方向盘展开 / 收起两种状态下的可达性仍有布局冲突，待验证；其余触控按钮在左右门板，门板不显示任何状态。每一次操作，都在大屏对应分区得到回应。操作在手边，信息在眼前。</p><p class="en">A regular elongated-octagon display is divided into three zones: driver control, shared centre, passenger entertainment. Status appears only here. Controls sit in two places: essential driving functions (hazards, SOS, indicators, gear, driver-assist activation) are physical keys in a panel on the driver&#x27;s left, fixed in place, with haptic feedback; reach in both wheel states still has a layout conflict and is pending validation; all other touch controls are on the door panels, which never show status. Every input is answered in the matching zone of the display. Controls at hand, information in view.</p><p class="strats__more">实体键区参照工信部 GB 4094 修订征求意见稿（2026 年 2 月，尚未正式发布）对实体操纵件的要求<sup class="fn"><a href="#c04-S8" id="c04-r-S8-1" aria-label="来源 S8">S8</a></sup>。</p><p class="en">The physical key panel follows the requirements for physical controls in MIIT&#x27;s draft revision of GB 4094 (February 2026, not yet final)<sup class="fn"><a href="#c04-S8" id="c04-r-S8-2" aria-label="来源 S8">S8</a></sup>.</p></li>
+      <li data-reveal><span class="strats__n">S3</span><h3>以驾驶员为中心的秩序</h3><p class="strats__en">Driver-Centred Order</p><p>中控朝向驾驶员，中央区域不设按钮，实体键也让到驾驶员左侧。造型以规则弧线与统一切角组织层次，拒绝不规则曲面：规则，而不呆板。</p><p class="en">The centre console turns toward the driver; no buttons sit in the middle, and even the physical keys move to the driver&#x27;s left. Form is organised by regular arcs and consistent chamfers, never free-form surfaces: regular, but not rigid.</p></li>
+    </ol>
+    <aside class="fnotes fnotes--inline" data-reveal><p class="mono fnotes__h">Sources · 本章来源<span class="src">据 01_research/背景_趋势_场景.md 来源表 · 检索日 2026-11-01</span></p><ol><li id="c04-S8"><span class="fnotes__n">S8</span><span class="fnotes__t">工信部；新华社 · <a href="https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20262/56c5d434d8f840b9ac95ee7cf4183d5f.pdf" target="_blank" rel="noopener">GB 4094《汽车操纵件、指示器及信号装置的标志》征求意见稿及编制说明；新国标拟增加汽车实体操纵件相关要求</a> <a class="fnotes__x" href="https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20262/58c6a7f922004ec58739f836477e3cdb.pdf" target="_blank" rel="noopener">[2]</a> <a class="fnotes__x" href="https://www.news.cn/fortune/20260215/8b727ede9b294fd685e28b8b84f4edaa/c.html" target="_blank" rel="noopener">[3]</a><span class="fnotes__d">2026-02（征求意见）；2026-02-15（新华社）</span></span><a class="fnotes__back" href="#c04-r-S8-1" aria-label="回到正文">↑</a></li></ol></aside>
+    <p class="mono subhead">硬性约束 C1–C7 · Hard Constraints C1–C7<span class="src">据 00_brief/项目简报.md</span></p>
+    <!-- 七条约束 -->
+    <ol class="rules">
+      <li data-reveal><span class="rules__n">C1</span><h4>方向盘可收缩</h4><p>展开 = 人工驾驶；收起 = L4。需交代收纳结构。</p></li>
+      <li data-reveal><span class="rules__n">C2</span><h4>长八边形大连屏</h4><p>规则长八边形：长边平直、两端统一切角，非简单方屏。</p></li>
+      <li data-reveal><span class="rules__n">C3</span><h4>以驾驶员为中心</h4><p>中控布局朝向并服务驾驶员。</p></li>
+      <li data-reveal><span class="rules__n">C4</span><h4>中间无按钮</h4><p>中控区域不放置任何按钮。</p></li>
+      <li data-reveal><span class="rules__n">C5</span><h4>门板屏不显示状态</h4><p>触控按钮位于左右门板触控屏，门板屏只放按钮、不显示任何状态。</p></li>
+      <li data-reveal><span class="rules__n">C6</span><h4>中央屏三区</h4><p>左 = 驾驶主控，中 = 中央共享，右 = 副驾娱乐；门板触控后在对应区给出明确反馈。</p></li>
+      <li data-reveal><span class="rules__n">C7</span><h4>72 个交互任务</h4><p>交互 Demo 共 72 个任务，一个都不能丢。</p></li>
+    </ol>
+
+    <!-- 交互示意图 -->
+    <div class="cockpit" data-reveal>
+      <div class="cockpit__bar">
+        <span class="mono">Fig. 02-A　座舱布局示意（非最终造型）</span>
+        <div class="mode" role="group" aria-label="驾驶模式">
+          <button class="mode__btn" data-mode="manual">人工驾驶 · 方向盘展开</button>
+          <button class="mode__btn is-on" data-mode="l4">L4 · 方向盘收起</button>
+        </div>
+      </div>
+      <svg class="cockpit__svg" viewBox="0 0 1200 520" aria-label="大连屏三区、驾驶员左侧实体键区与门板触控示意">
+        <defs>
+          <linearGradient id="zoneG" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="currentColor" stop-opacity=".10"/><stop offset="1" stop-color="currentColor" stop-opacity=".02"/></linearGradient>
+        </defs>
+        <!-- 仪表台层次 -->
+        <path class="dash l1" d="M60,300 Q600,210 1140,300" fill="none"/>
+        <path class="dash l2" d="M80,330 Q600,245 1120,330" fill="none"/>
+        <path class="dash l3" d="M110,362 Q600,285 1090,362" fill="none"/>
+        <!-- 长八边形大连屏 -->
+        <g class="screen">
+          <polygon class="screen__frame" points="214,90 986,90 1016,120 1016,200 986,230 214,230 184,200 184,120"/>
+          <polygon class="zone z-left"   data-zone="left"   points="216,98 478,98 478,222 216,222 192,198 192,122"/>
+          <rect    class="zone z-center" data-zone="center" x="486" y="98" width="228" height="124"/>
+          <polygon class="zone z-right"  data-zone="right"  points="722,98 984,98 1008,122 1008,198 984,222 722,222"/>
+          <text x="335" y="152" class="zt">左 · 驾驶主控</text><text x="335" y="176" class="zs">DRIVER</text>
+          <text x="600" y="152" class="zt">中 · 中央共享</text><text x="600" y="176" class="zs">SHARED</text>
+          <text x="865" y="152" class="zt">右 · 副驾娱乐</text><text x="865" y="176" class="zs">PASSENGER</text>
+        </g>
+        <!-- 驾驶员中心 -->
+        <g class="driver">
+          <circle cx="335" cy="470" r="7"/>
+          <path d="M335,463 L335,236" class="ray"/>
+          <path d="M335,463 L196,236" class="ray thin"/><path d="M335,463 L600,236" class="ray thin"/>
+          <text x="352" y="478" class="lbl">驾驶员视点 · 中控以驾驶员为中心</text>
+        </g>
+        <!-- 方向盘（可收缩） -->
+        <g class="wheel" transform="translate(335,330)">
+          <g class="wheel__body">
+            <polygon points="-92,-18 92,-18 104,-6 104,6 92,18 -92,18 -104,6 -104,-6" class="wheel__rim"/>
+            <rect x="-26" y="-6" width="52" height="12" rx="1" class="wheel__hub"/>
+            <line x1="0" y1="18" x2="0" y2="56" class="wheel__col"/>
+          </g>
+          <line x1="-112" y1="-26" x2="112" y2="-26" class="wheel__slot"/>
+          <text x="124" y="-22" class="lbl">收纳槽</text>
+        </g>
+        <!-- 中间无按钮 -->
+        <g class="nobtn"><rect x="540" y="388" width="120" height="56" class="nobtn__box"/><line x1="540" y1="444" x2="660" y2="388"/><text x="600" y="470" class="lbl c">中间 · 无实体按钮</text></g>
+        <!-- 驾驶员左侧实体键区（只表示在驾驶员左侧，不表示具体安装位置） -->
+        <g class="keys">
+          <rect x="104" y="352" width="26" height="80" class="keys__panel"/>
+          <g class="keys__btns"><rect x="110" y="360" width="14" height="12"/><rect x="110" y="378" width="14" height="12"/><rect x="110" y="396" width="14" height="12"/><rect x="110" y="414" width="14" height="12"/></g>
+          <text x="140" y="392" class="lbl">驾驶员左侧实体键区</text>
+          <text x="140" y="408" class="lbl lbl--en">Physical keys (left of driver)</text>
+        </g>
+        <!-- 门板触控屏（只放按钮） -->
+        <g class="door door-l" data-door="left">
+          <polygon points="18,300 52,290 52,470 18,480" class="door__panel"/>
+          <g class="door__btns"><rect x="26" y="320" width="18" height="18" data-hit="left"/><rect x="26" y="348" width="18" height="18" data-hit="left"/><rect x="26" y="376" width="18" height="18" data-hit="left"/><rect x="26" y="404" width="18" height="18" data-hit="left"/></g>
+          <text x="62" y="500" class="lbl">左门板触控屏 · 仅按钮</text>
+        </g>
+        <g class="door door-r" data-door="right">
+          <polygon points="1182,300 1148,290 1148,470 1182,480" class="door__panel"/>
+          <g class="door__btns"><rect x="1156" y="320" width="18" height="18" data-hit="right"/><rect x="1156" y="348" width="18" height="18" data-hit="right"/><rect x="1156" y="376" width="18" height="18" data-hit="right"/><rect x="1156" y="404" width="18" height="18" data-hit="right"/></g>
+          <text x="1138" y="500" class="lbl r">右门板触控屏 · 仅按钮</text>
+        </g>
+        <path class="flow flow-l" d="M52,330 C120,300 160,250 200,215"/>
+        <path class="flow flow-r" d="M1148,330 C1080,300 1040,250 1000,215"/>
+      </svg>
+      <p class="cockpit__hint mono">→ 点击左右门板按钮，查看大屏对应区的反馈；切换模式查看方向盘展开 / 收起。示意图仅表达逻辑关系。</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== 05 概念推演 · 浅（纸） ========== -->
+<section id="concept" class="sec sec--paper concept--editorial" data-theme="light" data-chapter="05" data-title="草图推演">
+  <div class="wrap">
+    <header class="concept-heading">
+      <p class="mono">05 / FORM EXPLORATION</p>
+      <h2>保留设计意图，<br>重新建立空间。</h2>
+      <p class="concept-heading__lead">从 Kai 的原稿出发，保留水平层次与中控走向；借白模校准相机与透视，再深化结构衔接。</p>
+    </header>
+    <div class="origin-study">
+      <figure>
+        <button type="button" class="art-zoom" data-full="assets/web/sketches/huihu_driver34_v01.jpg" data-caption="Kai 原稿 v01 · 方向盘是独立图层，不代表真实空间位置。" aria-label="放大 Kai 原稿 v01">
+          <img src="assets/web/sketches/huihu_driver34_v01.jpg" width="1024" height="563" alt="Kai 回弧原稿：红色线条表现仪表台分层、中控走向和独立方向盘图层" loading="lazy" decoding="async">
+          <span class="art-zoom__hint">查看原稿 <span aria-hidden="true">＋</span></span>
+        </button>
+        <figcaption><span class="mono">01 / ORIGINAL</span><b>Kai 的设计原点</b></figcaption>
+      </figure>
+      <div class="origin-study__notes">
+        <div><span class="mono">RETAIN</span><h3>保留层次与走向</h3><p>仪表台的水平叠层、长条屏位与中控走向，来自原稿，不由白模重新定义。</p></div>
+        <div><span class="mono">REBUILD</span><h3>校正空间，不改设计</h3><p>白模只作相机和透视参照，估算尺寸不照搬。原稿方向盘是独立图层，位置需另行核查。</p></div>
+      </div>
+    </div>
+    <div class="sketch-study" data-layer="color">
+      <header class="sketch-study__head"><div><p class="mono">02 / STRUCTURE STUDY</p><h3>从线面关系，到结构表现。</h3></div><div class="study-switch" role="group" aria-label="候选草图图层"><button type="button" data-study-layer="line" aria-pressed="false">线稿</button><button type="button" data-study-layer="color" aria-pressed="true">上色</button></div></header>
+      <figure class="sketch-study__figure">
+        <button type="button" class="art-zoom" id="studyZoom" data-full="assets/web/sketches/candidate_v12_color.webp" data-caption="v12 结构修订候选 · AI 辅助；左侧键区与横饰板层叠继续修订，非终稿。" aria-label="放大当前候选草图">
+          <img id="studyImage" src="assets/web/sketches/candidate_v12_color.webp" width="1280" height="720" loading="lazy" decoding="async" alt="v12 结构修订候选上色稿，左侧键区与横饰板层次仍待精修">
+          <span class="art-zoom__hint">放大当前图 <span aria-hidden="true">＋</span></span>
+        </button>
+        <figcaption><span class="edition-tag">v12 候选 · 非终稿</span><p id="studyCaption" aria-live="polite">上色稿 · 观察体块、明暗与衔接；不代表最终材质与结构。</p></figcaption>
+      </figure>
+      <div class="design-changes">
+        <article><span class="mono">01 / LAYERS</span><h4>连续，不等于简化。</h4><p>横饰板已消除贴片接缝；上层、内收阴影层与下层结构仍需补回。</p><span class="revision-status">层叠待精修</span></article>
+        <article><span class="mono">02 / CONTROLS</span><h4>让键区成为仪表台的一部分。</h4><p>左侧实体键板仍偏高，下一步改为连续下折的斜面；按键位置待可达核查。</p><span class="revision-status">结构继续修订</span></article>
+        <article><span class="mono">03 / CONNECTION</span><h4>交代厚度，也交代边界。</h4><p>副驾托盘已补板厚与侧壁；和门板的连接目前仅为草图表现，未做结构验证。</p><span class="revision-status">连接待验证</span></article>
+      </div>
+    </div>
+    <details class="study-record"><summary>素材版本与待完成项 <span aria-hidden="true">＋</span></summary><div><p>本章固定展示原稿 v01 与结构修订候选 v12。v13 正在修订，不自动追换；线稿与上色均为候选表达，不作为机构或人机验证依据。</p><p>概念发散、完整形态推演链、门板触控特写与爆炸层次图仍待补齐；缺失内容不以重复旧图代替。旧三态与收纳研究集中保留在第 07 章，并单独标注旧版。</p><p class="mono">来源：02_sketches/00_Kai原稿/回弧_驾驶位34_v01.jpg<br>02_sketches/03_三视角透视/驾驶位34_线稿_v12.jpg · 驾驶位34_上色_v12.jpg</p></div></details>
+    <a class="concept-next editorial-link" href="#form">继续看造型与层次 <span aria-hidden="true">↗</span></a>
+  </div>
+</section>
+
+<div class="seam seam--l2d" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,40 Q800,180 1600,40" fill="none"/></svg></div>
+
+<!-- ========== 06 造型与层次 · 深 ========== -->
+<section id="form" class="sec" data-theme="dark" data-chapter="06" data-title="造型与层次">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">06</span>
+      <div>
+        <p class="sec__en">Form &amp; Layers</p>
+        <h2 class="sec__title" data-reveal>造型与层次</h2>
+      </div>
+      <p class="sec__lead" data-reveal>弧线负责舒展，切角负责秩序，层次负责细节。<span class="lead-en">Arcs bring ease, chamfers bring order, layers bring detail.</span><span class="src">文案据 08_copy/ch06_form.md</span></p>
+    </header>
+
+  </div>
+  <div class="compare wrap-wide" data-reveal>
+    <div class="compare__stage" id="compare">
+      <figure class="ph ph--full compare__a" data-src="assets/renders/render_manual">
+        <div class="ph__art"></div>
+        <figcaption class="ph__tag"><b>占位 · 待替换：</b>人工驾驶模式渲染（方向盘展开）<em>应来自 04_renders → render_manual.jpg</em></figcaption>
+      </figure>
+      <figure class="ph ph--full ph--alt compare__b" data-src="assets/renders/render_L4">
+        <div class="ph__art"></div>
+        <figcaption class="ph__tag"><b>占位 · 待替换：</b>L4 模式渲染（方向盘收起）<em>应来自 04_renders → render_L4.jpg</em></figcaption>
+      </figure>
+      <div class="compare__handle"><span></span></div>
+      <span class="compare__lab l mono">Manual · 人工驾驶</span><p class="compare__cap">人工驾驶与 L4，同一座舱的两种状态。<i>Manual and L4: one cabin, two states.</i></p><span class="compare__lab r mono">L4 · 自动驾驶</span>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="details">
+      <figure class="ph" style="--ar:3/4" data-src="assets/visuals/02_细节特写/d1_screen_chamfer" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>大连屏两端统一切角，长边平直。<i>Consistent chamfers at both ends of the display; long edges kept straight.</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>大屏切角与边框<em>05_visuals/02_细节特写 → d1_screen_chamfer.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:3/4" data-src="assets/visuals/02_细节特写/d2_wheel_seam" data-reveal><div class="ph__art"></div><figcaption class="ph__tag"><b>占位 · 待替换：</b>方向盘收纳缝<em>05_visuals/02_细节特写 → d2_wheel_seam.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:3/4" data-src="assets/visuals/02_细节特写/d3_door_touch" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>门板触控区，只放按钮，不显示状态。<i>Door-panel touch zone: controls only, no status.</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>门板触控区<em>05_visuals/02_细节特写 → d3_door_touch.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:3/4" data-src="assets/visuals/02_细节特写/d4_trim_light" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>贯穿饰条与氛围灯。<i>Full-width trim and ambient light.</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>饰条与氛围灯<em>05_visuals/02_细节特写 → d4_trim_light.jpg</em></figcaption></figure>
+      <figure class="ph" style="--ar:3/4" data-src="assets/visuals/02_细节特写/d5_material_joint" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>材质交接处的分缝与收边。<i>Seams and edge finishes where materials meet.</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>材质交接<em>05_visuals/02_细节特写 → d5_material_joint.jpg</em></figcaption></figure>
+    </div>
+
+    <div class="explode">
+      <div class="explode__text">
+        <span class="mono">Fig. 04-B　分层示意</span>
+        <h3 class="h3">多层次结构</h3>
+        <p>右侧为分层示意动画（非最终造型），最终以建模爆炸图为准。<span class="src">分层据 02_sketches 规划</span></p>
+        <ol class="legend"><li><span class="mono">01</span>仪表台</li><li><span class="mono">02</span>大屏</li><li><span class="mono">03</span>氛围灯</li><li><span class="mono">04</span>饰条</li><li><span class="mono">05</span>结构层</li></ol>
+        <figure class="ph" style="--ar:16/10" data-src="assets/visuals/06_爆炸图美化/exploded"><div class="ph__art"></div><span class="ph__cap"><b>图注</b>分层爆炸图，从结构层到饰面层。<i>Exploded view, from structure to finish.</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>建模分层爆炸图（美化版）<em>05_visuals/06_爆炸图美化 → exploded.jpg（基于 03_models）</em></figcaption></figure>
+      </div>
+      <div class="explode__stack" id="explode">
+        <div class="plate" data-i="0"><span>05 · 结构层</span></div>
+        <div class="plate" data-i="1"><span>04 · 饰条</span></div>
+        <div class="plate" data-i="2"><span>03 · 氛围灯</span></div>
+        <div class="plate" data-i="3"><span>02 · 大屏</span></div>
+        <div class="plate" data-i="4"><span>01 · 仪表台</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="seam seam--d2l" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,160 Q800,20 1600,160" fill="none"/></svg></div>
+
+<!-- ========== 07 可收缩方向盘 · 浅 ========== -->
+<section id="steering" class="sec" data-theme="light" data-chapter="07" data-title="可收缩方向盘">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">07</span>
+      <div>
+        <p class="sec__en">Retractable Steering</p>
+        <h2 class="sec__title" data-reveal>可收缩方向盘</h2>
+      </div>
+      <p class="sec__lead" data-reveal>方向盘退让的那一刻，座舱从驾驶舱变成起居空间。<span class="lead-en">The moment the wheel retreats, the cockpit becomes a living space.</span><span class="src">文案据 08_copy/ch07_steering.md</span></p>
+    </header>
+
+    <div class="wheelview" id="wheelview" data-layer="color" data-view="s1" data-reveal>
+      <p class="oldver" role="note"><b>旧版 v07</b>三态草图为旧版 v07，不代表当前收纳方案：现行方案 B 在进入 L4 时座椅联动后移并下降，座椅行程尚未核定。<i>Old v07 sketches; they do not show the current stowage scheme (scheme B adds a coordinated seat move, travel not yet confirmed).</i></p>
+      <div class="wheelview__bar">
+        <span class="mono">Fig. 07-A　同机位三态 · 优化草图（AI 辅助）展开 <span data-sk-ver="wheel_s1_color">v07</span> / 过渡 <span data-sk-ver="wheel_s2_color">v07</span> / 收起 <span data-sk-ver="wheel_s3_color">v07</span></span>
+        <div class="seg" role="group" aria-label="状态">
+          <button type="button" data-view="s1" class="is-on">展开</button><button type="button" data-view="s2">过渡</button><button type="button" data-view="s3">收起</button><button type="button" data-view="split">滑块对比</button>
+        </div>
+        <div class="seg" role="group" aria-label="图层">
+          <button type="button" data-layer="line">线稿</button><button type="button" data-layer="color" class="is-on">上色</button>
+        </div>
+      </div>
+      <div class="wheelview__stage" id="wheelStage">
+        <div class="wv wv--s3"><img class="wv__line" data-sk="wheel_s3_line" src="assets/web/sketches/wheel_s3_line.jpg" alt="态 3 · 收起 · L4（线稿，优化草图）"><img class="wv__color" data-sk="wheel_s3_color" src="assets/web/sketches/wheel_s3_color.jpg" alt="态 3 · 收起 · L4（上色，优化草图）"></div>
+        <div class="wv wv--s2"><img class="wv__line" data-sk="wheel_s2_line" src="assets/web/sketches/wheel_s2_line.jpg" alt="态 2 · 过渡（线稿，优化草图）"><img class="wv__color" data-sk="wheel_s2_color" src="assets/web/sketches/wheel_s2_color.jpg" alt="态 2 · 过渡（上色，优化草图）"></div>
+        <div class="wv wv--s1"><img class="wv__line" data-sk="wheel_s1_line" src="assets/web/sketches/driver34_line.jpg" alt="态 1 · 展开 · 人工驾驶（线稿，优化草图）"><img class="wv__color" data-sk="wheel_s1_color" src="assets/web/sketches/driver34_color.jpg" alt="态 1 · 展开 · 人工驾驶（上色，优化草图）"></div>
+        <div class="wheelview__handle"><span></span></div>
+        <p class="wv__lab wv__lab--l"><b>展开 · 人工驾驶</b><i>Deployed · Manual</i></p>
+        <p class="wv__lab wv__lab--m"><b>过渡</b><i>Transition</i></p>
+        <p class="wv__lab wv__lab--r"><b>收起 · L4</b><i>Stowed · L4</i></p>
+      </div>
+      <p class="wheelview__src mono">优化草图 · 同机位切换展开 / 过渡 / 收起，滑块对比展开与收起<em><span data-sk-path="wheel_s1_color">02_sketches/03_三视角透视/驾驶位34_上色_v07_2560.jpg</span> · <span data-sk-path="wheel_s2_color">02_sketches/04_方向盘展开收起/态2_过渡_上色_v07_2560.jpg</span> · <span data-sk-path="wheel_s3_color">02_sketches/04_方向盘展开收起/态3_L4收起_上色_v07_2560.jpg</span>（线稿同名）</em></p>
+    </div>
+    <div class="states__bar" aria-hidden="true"><span>展开 · Manual</span><i></i><span>过渡</span><i></i><span>收起 · L4</span></div>
+    <div class="split">
+<figure class="ph" style="--ar:16/10" data-reveal><div class="ph__art"></div><figcaption class="ph__tag"><b>占位 · 待 v04 核查：</b>收纳结构侧视示意（旧版 v02 已被人机 v03 结论推翻，已撤下）<em>02_sketches/04_方向盘展开收起 → 收纳结构侧视示意_v04（待出）</em></figcaption></figure>
+      <div class="note-block" data-reveal><span class="mono">Structure · Steer-by-wire</span><h3 class="h3">收纳结构</h3><p class="tag-ph">[占位文案] 收纳机构与分缝说明待机构定稿后撰写。</p>
+        <div class="prose"><p>线控转向让方向盘与车轮之间不再需要机械连接，这是收纳得以实现的前提。GB 17675-2025《汽车转向系 基本要求》已删除转向盘与转向器须机械连接的强制要求（2026-07-01 实施）。</p>
+        <p class="en">Steer-by-wire removes the mechanical link between wheel and road wheels, which is what makes stowage possible. China's GB 17675-2025 standard, in force from 1 July 2026, no longer mandates that mechanical link.</p>
+        <p class="prose__src">来源：<a href="https://www.cqn.com.cn/auto/content/2025-12/03/content_9134093.htm" target="_blank" rel="noopener">中国质量新闻网</a> · <a href="https://openstd.samr.gov.cn/bzgk/std/newGbInfo?hcno=31A8C8FEC38342D2FE8F3F2ECEDFB53F" target="_blank" rel="noopener">国家标准信息公共服务平台 · GB 17675-2025</a></p></div></div>
+    </div>
+  </div>
+  <div class="filmband" data-theme="dark">
+  <div class="film wrap-wide" data-reveal>
+    <figure class="vid" style="--ar:16/9">
+      <video class="autovid" muted loop playsinline preload="metadata" src="assets/video/huihu_wheel_stow_16x9.mp4" aria-label="方向盘收起样片 v0"></video>
+      <figcaption class="vid__cap"><span class="mono">旧样片 v0 · 8s</span><span class="oldtag">非最新方案 · 未含座椅联动</span><b>从人工到 L4，方向盘后退、躺平、入槽。</b><i>From manual to L4: the wheel draws back, lies flat, and settles into the panel.</i><em>06_video/huihu_wheel_stow_16x9.mp4 · 完整版 huihu_film.mp4 待替换</em></figcaption>
+    </figure>
+  </div>
+
+    <div class="wrap">
+    <ol class="shots">
+      <li data-reveal><span class="mono">Shot 1</span>开场：内饰全景缓推，氛围灯亮起</li>
+      <li data-reveal><span class="mono">Shot 2</span>方向盘收起：展开 → 收入仪表台，人工 → L4</li>
+      <li data-reveal><span class="mono">Shot 3</span>门板触控 → 大屏对应区反馈</li>
+      <li data-reveal><span class="mono">Shot 4</span>人工 / L4 切换：三区布局随模式切换</li>
+      <li data-reveal><span class="mono">Shot 5</span>收尾：主视觉定帧 + 方案名「回弧」</li>
+    </ol>
+      <p class="src block">镜头脚本据 05_visuals/00_视觉与视频规划.md（v0 待确认）；视频素材按框架归入本章</p>
+    </div>
+  </div>
+</section>
+
+<div class="seam seam--l2d" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,40 Q800,180 1600,40" fill="none"/></svg></div>
+
+<!-- ========== 08 交互系统 · 深 ========== -->
+<section id="interaction" class="sec" data-theme="dark" data-chapter="08" data-title="交互系统">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">08</span>
+      <div>
+        <p class="sec__en">Interaction System</p>
+        <h2 class="sec__title" data-reveal>交互系统</h2>
+      </div>
+      <p class="sec__lead" data-reveal>手在两侧操作，眼在前方确认。<span class="lead-en">Hands act at the sides; eyes confirm ahead.</span><span class="src">文案据 08_copy/ch08_interaction.md</span></p>
+    </header>
+
+  </div>
+  <div class="demo wrap-wide" data-reveal>
+    <div class="demo__frame">
+      <div class="demo__chrome"><span class="mono">HMI Demo · 72 Tasks</span><span class="mono" id="demoStatus">检测中…</span><a class="mono" id="demoOpen" href="assets/hmi/index.html" target="_blank" rel="noopener" hidden>新窗口打开 ↗</a></div>
+      <div class="demo__screen">
+        <iframe id="demoFrame" title="回弧 HMI 72 任务 Demo" loading="lazy" hidden></iframe>
+        <div class="demo__ph" id="demoPh">
+          <div class="demo__zones"><span>左 · 驾驶主控</span><span>中 · 中央共享</span><span>右 · 副驾娱乐</span></div>
+          <p class="ph__tag static"><b>占位 · 待替换：</b>72 任务交互 Demo（iframe）<em>应来自 07_hmi → index.html（放入后自动嵌入）</em></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="demo__cap">72 项任务交互 Demo，可直接操作。<i>Interactive demo of all 72 tasks.</i><span class="pend" id="demoPend">Demo 与 tasks.json 待接入 · 页面不使用测试数据</span></p>
+    <div class="prose prose--2col" data-reveal>
+      <div><p>操作分为两处。驾驶员左侧是实体键区：双闪、SOS、转向灯、挡位、驾驶辅助激活等基础驾驶功能做成位置固定、带触觉反馈的实体键；方向盘展开 / 收起两种状态下的可达与盲操仍有布局冲突，待验证。其余操作交给左右门板触控屏，门板只承载按钮，不显示任何状态。</p>
+      <p class="en">Controls live in two places. A panel on the driver&#x27;s left holds the physical keys: hazards, SOS, indicators, gear and driver-assist activation are fixed, haptic keys; reach and eyes-free use in both wheel states still have a layout conflict and are pending validation. Everything else is on the door-panel touchscreens, which carry controls only and never show status.</p>
+      <p>人工与 L4 之间的切换也在大屏左区逐步提示：进入 L4 时，先移座椅（后移并下降），再收方向盘；切回人工时，先展开方向盘，再复位座椅。<span class="pend">座椅后移 / 下降行程待核定</span></p>
+      <p class="en">Switching between manual and L4 is shown step by step in the left zone: entering L4, the seat moves first (back and down), then the wheel stows; returning to manual, the wheel deploys first, then the seat resets. <span class="pend">Seat travel pending validation</span></p>
+      <p>状态统一交给中央长八边形大屏。大屏分三区：左区驾驶主控，中区共享信息，右区副驾娱乐。无论按下实体键还是触控门板，都会在对应分区得到明确反馈；操作与结果不在同一处，却始终一一对应。</p>
+      <p class="en">All status lives on the central elongated-octagon display, divided into driver control on the left, shared information in the centre and passenger entertainment on the right. Whether a physical key or a door control is pressed, the matching zone responds clearly. Action and result sit apart, yet always correspond one to one.</p></div>
+      <div><figure class="ph keys__ph" style="--ar:4/3" data-src="assets/visuals/02_细节特写/d6_physical_keys"><div class="ph__art"></div><span class="ph__cap"><b>图注</b>驾驶员左侧的实体键区（双状态可达性待验证）。<i>The physical key panel on the driver&#x27;s left (reach in both wheel states pending validation).</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>驾驶员左侧实体键区<em>05_visuals/02_细节特写 → d6_physical_keys.jpg</em></figcaption></figure>
+      <div class="prose__law"><span class="mono">Compliance · GB 4094 征求意见稿</span><p>实体键区参照工信部 GB 4094 修订征求意见稿（2026 年 2 月，尚未正式发布）中“实体操纵件不应仅设置在显示屏上”的要求<sup class="fn"><a href="#c08-S8" id="c08-r-S8-1" aria-label="来源 S8">S8</a></sup>。</p><p class="en">The physical key panel follows the draft revision of GB 4094, published for comment by MIIT in February 2026 and not yet final, which requires that certain controls not exist only on a screen<sup class="fn"><a href="#c08-S8" id="c08-r-S8-2" aria-label="来源 S8">S8</a></sup>.</p></div>
+      <p>整套 Demo 覆盖 72 项任务，每一项都标明操作位置（实体键区、左门板或右门板）与反馈分区。</p>
+      <p class="en">The demo covers all 72 tasks, each mapped to its control location (physical key panel, left door or right door) and feedback zone.</p></div>
+    </div>
+    <aside class="fnotes fnotes--inline" data-reveal><p class="mono fnotes__h">Sources · 本章来源<span class="src">据 01_research/背景_趋势_场景.md 来源表 · 检索日 2026-11-01</span></p><ol><li id="c08-S8"><span class="fnotes__n">S8</span><span class="fnotes__t">工信部；新华社 · <a href="https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20262/56c5d434d8f840b9ac95ee7cf4183d5f.pdf" target="_blank" rel="noopener">GB 4094《汽车操纵件、指示器及信号装置的标志》征求意见稿及编制说明；新国标拟增加汽车实体操纵件相关要求</a> <a class="fnotes__x" href="https://www.miit.gov.cn/cms_files/filemanager/1226211233/attach/20262/58c6a7f922004ec58739f836477e3cdb.pdf" target="_blank" rel="noopener">[2]</a> <a class="fnotes__x" href="https://www.news.cn/fortune/20260215/8b727ede9b294fd685e28b8b84f4edaa/c.html" target="_blank" rel="noopener">[3]</a><span class="fnotes__d">2026-02（征求意见）；2026-02-15（新华社）</span></span><a class="fnotes__back" href="#c08-r-S8-1" aria-label="回到正文">↑</a></li></ol></aside>
+    <ol class="flow4 flow3">
+      <li data-reveal><span class="mono">01</span><h4>两处操作</h4><p>驾驶员左侧实体键区；左 / 右门板触控屏只显示按钮。</p></li>
+      <li data-reveal><span class="mono">02</span><h4>分区路由</h4><p>左门板 → 左区（驾驶主控）；右门板 → 右区（副驾娱乐）；实体键区的反馈分区以任务索引为准。<span class="src">据 05_visuals 规划 · tasks.json</span></p></li>
+      <li data-reveal><span class="mono">03</span><h4>明确反馈</h4><p>大屏对应区给出明确反馈，状态只在大屏显示。</p></li>
+    </ol>
+    <!-- 72 -->
+    <div class="tasks72">
+      <div class="tasks72__num"><span class="big" data-count="72">72</span><span class="mono">Interaction Tasks · 一个都不能丢</span></div>
+      <div class="tasks72__grid" id="taskGrid" aria-label="72 个交互任务"></div>
+      <p class="tasks72__cap" id="taskCap" hidden>72 项任务按操作位置与反馈分区排列。<i>The 72 tasks arranged by control location and feedback zone.</i></p>
+      <p class="tasks72__note mono" id="taskNote">占位 · 任务名称待从 07_hmi/tasks.json 导入（格式见 README）</p>
+    </div>
+    <div class="tasklist">
+      <div class="tasklist__head"><h3 class="h3">任务索引 <span class="mono" id="taskCount">72 / 72</span></h3><div class="tfilter" id="taskFilter" hidden></div></div>
+      <ol class="tasklist__ol" id="taskList"></ol>
+    </div>
+  </div>
+</section>
+
+<div class="seam seam--d2l" aria-hidden="true"><svg viewBox="0 0 1600 200" preserveAspectRatio="none"><path d="M0,160 Q800,20 1600,160" fill="none"/></svg></div>
+
+<!-- ========== 09 材质与氛围 · 浅 ========== -->
+<section id="cmf" class="sec" data-theme="light" data-chapter="09" data-title="材质与氛围" data-cmf-primary="B">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">09</span>
+      <div>
+        <p class="sec__en">CMF &amp; Ambience</p>
+        <h2 class="sec__title" data-reveal>材质与氛围</h2>
+      </div>
+      <p class="sec__lead" data-reveal>日光里的座舱，安静而通透。<span class="lead-en">A cabin in daylight: quiet, open, clear.</span><span class="src">文案据 08_copy/ch09_cmf.md</span></p>
+    </header>
+
+    <div class="prose cmf__body" data-reveal><p>暖白与燕麦铺陈底色，拉丝铝与开孔白蜡木以冷暖相对拉出层次，乳白透光面板在约 4000K 的柔和暖白光下均匀发亮。</p><p class="en">Warm white and oat set the ground; brushed aluminium and open-pore ash play cool against warm to build depth, and milky translucent panels glow evenly in soft warm-white light at about 4000K.</p></div>
+
+    <!-- 主推方向在 section 的 data-cmf-primary 上改（A / B / C），其余自动降为「探索方案」 -->
+    <div class="cmf3">
+      <article class="cboard" data-cmf="A" data-reveal>
+        <button class="cboard__img" data-full="assets/web/cmf/CMF_A.jpg" aria-label="放大查看 A 深色典雅"><img src="assets/web/cmf/CMF_A.jpg" alt="CMF A 深色典雅 材质板" loading="lazy"></button>
+        <div class="cboard__info">
+          <span class="final-tag">定稿方向 · Final</span><span class="explore-tag">探索方案 · Exploration</span>
+          <header><span class="cboard__l">A</span><div><h3>深色典雅</h3><p class="cboard__en">Midnight Elegance</p></div></header>
+          <p>午夜蓝与石墨为底，香槟金只以细线与缝线点到为止；约 2700K 琥珀暖光。</p>
+          <p class="en">Midnight blue and graphite, with champagne gold reserved for fine lines and stitching; warm amber light at about 2700K.</p>
+          <ul class="chips"><li style="--c:#1B2438"><i></i>午夜蓝 主色 #1B2438 · 50%</li><li style="--c:#3A3D42"><i></i>石墨灰 辅色 #3A3D42 · 25%</li><li style="--c:#121418"><i></i>深空黑 基底 #121418 · 15%</li><li style="--c:#C8A97E"><i></i>香槟金 点缀 #C8A97E · 7%</li><li style="--c:#F2C27B"><i></i>琥珀光 氛围光 #F2C27B · 3%</li></ul>
+          <div class="ratio"><i style="--c:#1B2438;--w:50"></i><i style="--c:#3A3D42;--w:25"></i><i style="--c:#121418;--w:15"></i><i style="--c:#C8A97E;--w:7"></i><i style="--c:#F2C27B;--w:3"></i></div>
+          <a class="mono cboard__raw" href="assets/web/cmf/CMF_A.jpg" target="_blank" rel="noopener">大图 ↗（原图 3840×2160 未随包）</a>
+        </div>
+      </article>
+      <article class="cboard" data-cmf="B" data-reveal>
+        <button class="cboard__img" data-full="assets/web/cmf/CMF_B.jpg" aria-label="放大查看 B 浅色高级"><img src="assets/web/cmf/CMF_B.jpg" alt="CMF B 浅色高级 材质板" loading="lazy"></button>
+        <div class="cboard__info">
+          <span class="final-tag">定稿方向 · Final</span><span class="explore-tag">探索方案 · Exploration</span>
+          <header><span class="cboard__l">B</span><div><h3>浅色高级</h3><p class="cboard__en">Ivory Atelier</p></div></header>
+          <p>暖白与燕麦营造日光座舱，拉丝铝与开孔白蜡木冷暖相对；约 4000K 柔和暖白光。</p>
+          <p class="en">Warm white and oat for a daylight cabin, brushed aluminium against open-pore ash; soft warm-white light at about 4000K.</p>
+          <ul class="chips"><li style="--c:#EDE6DA"><i></i>暖白 主色 #EDE6DA · 50%</li><li style="--c:#CDBFA8"><i></i>燕麦 辅色 #CDBFA8 · 25%</li><li style="--c:#D9C7A7"><i></i>浅白蜡木 材质色 #D9C7A7 · 10%</li><li style="--c:#B9B8B3"><i></i>拉丝铝 金属 #B9B8B3 · 8%</li><li style="--c:#A89A86"><i></i>香槟钛 点缀 #A89A86 · 5%</li><li style="--c:#FFE9C7"><i></i>暖白光 氛围光 #FFE9C7 · 2%</li></ul>
+          <div class="ratio"><i style="--c:#EDE6DA;--w:50"></i><i style="--c:#CDBFA8;--w:25"></i><i style="--c:#D9C7A7;--w:10"></i><i style="--c:#B9B8B3;--w:8"></i><i style="--c:#A89A86;--w:5"></i><i style="--c:#FFE9C7;--w:2"></i></div>
+          <a class="mono cboard__raw" href="assets/web/cmf/CMF_B.jpg" target="_blank" rel="noopener">大图 ↗（原图 3840×2160 未随包）</a>
+        </div>
+      </article>
+      <div class="cmf__explore" data-reveal><span class="mono">Explorations · A and C</span><h3 class="h3">探索方案 · A 与 C</h3><p>在同一造型上试过的另外两种性格：夜色里的典雅，与冷光下的精确。</p><p class="en">Two other characters tried on the same form: elegance by night, precision in cool light.</p></div>
+      <article class="cboard" data-cmf="C" data-reveal>
+        <button class="cboard__img" data-full="assets/web/cmf/CMF_C.jpg" aria-label="放大查看 C 冷调科技"><img src="assets/web/cmf/CMF_C.jpg" alt="CMF C 冷调科技 材质板" loading="lazy"></button>
+        <div class="cboard__info">
+          <span class="final-tag">定稿方向 · Final</span><span class="explore-tag">探索方案 · Exploration</span>
+          <header><span class="cboard__l">C</span><div><h3>冷调科技</h3><p class="cboard__en">Glacier Tech</p></div></header>
+          <p>银灰与钛灰的精密金属感，冰蓝光勾勒层级与触控反馈；约 6500K 冷白光。</p>
+          <p class="en">Silver and titanium greys with precise metallic detail, ice-blue light tracing layers and touch feedback; cool white at about 6500K.</p>
+          <ul class="chips"><li style="--c:#8E949B"><i></i>银灰 主色 #8E949B · 45%</li><li style="--c:#5E656D"><i></i>冷灰 辅色 #5E656D · 25%</li><li style="--c:#1E2228"><i></i>深空灰 基底 #1E2228 · 15%</li><li style="--c:#A7ADB3"><i></i>钛灰 金属 #A7ADB3 · 10%</li><li style="--c:#7FD3F0"><i></i>冰蓝 氛围光 #7FD3F0 · 5%</li></ul>
+          <div class="ratio"><i style="--c:#8E949B;--w:45"></i><i style="--c:#5E656D;--w:25"></i><i style="--c:#1E2228;--w:15"></i><i style="--c:#A7ADB3;--w:10"></i><i style="--c:#7FD3F0;--w:5"></i></div>
+          <a class="mono cboard__raw" href="assets/web/cmf/CMF_C.jpg" target="_blank" rel="noopener">大图 ↗（原图 3840×2160 未随包）</a>
+        </div>
+      </article>
+    </div>
+    <p class="cmf__note">材质小样为 AI 生成概念示意，非量产料号，色值需打样校色。<i>Swatches are AI-generated concept visuals, not production materials; colours require physical matching.</i><span class="src">色值据 05_visuals/04_材质板/CMF说明.md</span></p>
+  </div>
+</section>
+
+<!-- ========== 10 结语 · 浅 ========== -->
+<section id="epilogue" class="sec epi" data-theme="light" data-chapter="10" data-title="结语">
+  <div class="wrap">
+    <header class="sec__head">
+      <span class="sec__num">10</span>
+      <div><p class="sec__en">Epilogue</p><h2 class="sec__title" data-reveal>结语</h2></div>
+    </header>
+    <figure class="ph epi__visual" style="--ar:21/9" data-src="assets/visuals/01_主视觉/hero_manual" data-reveal><div class="ph__art"></div><span class="ph__cap"><b>图注</b>人工驾驶，方向盘展开。<i>Manual mode, steering wheel deployed.</i></span><figcaption class="ph__tag"><b>占位 · 待替换：</b>回到主视觉 · 人工驾驶模式（方向盘展开）<em>应来自 05_visuals/01_主视觉 → hero_manual.jpg</em></figcaption></figure>
+    <blockquote class="epi__quote" data-reveal><span data-tl="epilogue-zh">需要时，方向盘回来；<br>不需要时，空间留给人。</span><i data-tl="epilogue-en">When needed, the wheel returns; when not, the space is yours.</i></blockquote>
+    <dl class="credits" data-reveal>
+      <div><dt>设计</dt><dd>Kai</dd></div>
+      <div><dt>指导教师</dt><dd class="tag-ph">[占位]</dd></div>
+      <div><dt>院校 / 专业</dt><dd class="tag-ph">[占位]</dd></div>
+      <div><dt>年份</dt><dd>2026</dd></div>
+      <div><dt>联系</dt><dd class="tag-ph">[占位]</dd></div>
+    </dl>
+  </div>
+  <footer class="foot wrap">
+    <svg class="foot__arc" viewBox="0 0 1600 260" preserveAspectRatio="none" aria-hidden="true"><path d="M0,250 Q800,-40 1600,250" fill="none"/></svg>
+    <div class="foot__row"><span class="foot__mark">回弧 <i>HUIHU</i> <em class="foot__sub">Return Arc</em></span><span class="mono">© 2026 Kai · 毕业设计作品集 · v0.1 预览版</span><a class="mono" href="#prologue">回到顶部 ↑</a></div>
+  </footer>
+</section>
+
+</main>
+
+<script src="vendor/gsap.min.js"></script>
+<script src="vendor/ScrollTrigger.min.js"></script>
+<script src="vendor/lenis.min.js"></script>
+<script src="js/taglines.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

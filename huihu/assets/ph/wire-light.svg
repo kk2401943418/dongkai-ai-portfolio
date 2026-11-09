@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" preserveAspectRatio="xMidYMid slice">
+  <g fill="none" stroke="#14161A" stroke-width="1" vector-effect="non-scaling-stroke">
+    <g opacity=".07">
+      <path d="M0 125H800M0 250H800M0 375H800M200 0V500M400 0V500M600 0V500"/>
+    </g>
+    <g opacity=".22">
+      <circle cx="400" cy="980" r="640"/><circle cx="400" cy="980" r="700"/>
+    </g>
+    <g opacity=".2">
+      <polygon points="190,180 610,180 630,200 630,300 610,320 190,320 170,300 170,200"/>
+      <path d="M330 186V314M470 186V314" opacity=".6"/>
+    </g>
+    <g opacity=".45"><path d="M392 250H408M400 242V258"/>
+      <path d="M24 24h18M24 24v18M776 24h-18M776 24v18M24 476h18M24 476v-18M776 476h-18M776 476v-18"/></g>
+  </g>
+</svg>
